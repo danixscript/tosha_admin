@@ -1,0 +1,65 @@
+.navAllBar{
+    height: 100vh;
+    width: 15%;
+    min-width: 200px;
+    position: relative;
+}
+
+.navlinkspos{
+    position: absolute;
+    bottom: 20%;
+    left: 0;
+    width: 100%;
+    
+
+}
+.navPosition{
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+.navRoutDiv{
+    max-width: 300px;
+   
+}
+.navInsideNav{
+    padding: 20px;
+}
+.linkInNav:hover{
+    background-color: gray;
+    color: white;
+}
+.linkInNav{
+    margin-top: 20px;
+  padding-right: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+ 
+  text-decoration: none;
+border-bottom: 2px solid black;  
+  border-top: none;
+}
+
+.linkInNavManeger{
+    margin-top: 20px;
+  padding-right: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 25px;
+  text-decoration: none;
+    border: 3px solid purple;
+}
+
+.adminInfo{
+ padding: 10px;
+    margin-bottom: 100px;
+    color: black;
+}
+
+.permisiions{
+    background-color: yellowgreen;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: white;
+}

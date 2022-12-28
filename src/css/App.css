@@ -1,0 +1,66 @@
+.positionfix{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+}
+.errposition{
+    position: fixed;
+    top: 5%;
+    right: 5%;
+}
+.maxh30{
+    max-height: 70px;
+    min-height: 70px;
+  
+}
+.maxh200{
+    max-height: 600px;
+    min-height: 500px;
+    overflow: scroll;
+    padding: 10px;
+}
+.theAmount{
+    background-color: aquamarine;
+}
+
+.chartdiv{
+    height: 100%;
+    width: 100%;
+    max-height: 400px;
+    min-height: 400px;
+    
+   
+}
+.chartdiv2{
+    height:98%;
+    width: 100%;
+    max-height: 500px;
+}
+
+.paddchard{
+    padding: 10px;
+}
+
+.censeldorder{
+    background-color: orange;
+}
+
+
+.form_Login{
+    height: 50vh;
+    width: 70%;
+
+}
+
+.lolog{
+    height: 40px;
+    width: 280px;
+    margin-top: 22px;
+
+}
+
+.btnlog{
+    padding: 10px 20px 10px 20px;
+    
+}

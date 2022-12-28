@@ -1,0 +1,221 @@
+*{
+  direction: rtl;
+}
+a{
+  color: black;
+}
+body{
+  background-color: purple;
+  color: white;
+}
+.flexrow{
+  display: flex;
+  flex-direction: row;
+}
+.flexcol{
+  display: flex;
+  flex-direction: column;
+}
+.link{
+text-decoration: none;}
+.center{
+  justify-content: center;
+  align-items: center;
+}
+.allpagesdiv{
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 50px;
+width: 75%;
+padding: 20px;
+}
+.bc{
+  background-color: rgb(255, 255, 255);
+
+}
+.prevewimage{
+  height: 50%;
+  width: 50%;
+}
+.br{
+  border: 1px solid gainsboro;
+}
+.pad10{
+  padding: 10px;
+}
+.header{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.marginbottom{
+  margin-bottom: 15px;
+}
+
+.input{
+  height: 50px;
+  margin-bottom: 10px;
+}
+.btn{
+  height: 50px;
+  text-transform: uppercase;
+}
+.w100{
+  width: 100%;
+}
+td{
+  padding: 15px;
+  text-align: center;
+}
+/* .theUserInfo{
+ width: 80%;
+  justify-content: space-around;
+} */
+
+.side{
+  margin-left: 55px;
+}
+
+.positionerr{
+  position: fixed;
+  top: 2%;
+  left: 10%;
+}
+.flexend{
+  align-items: flex-end;
+justify-items: flex-end;
+}
+.bet{
+  justify-content: space-between;
+}
+.h100{
+  height: 100%;
+}
+.margintop50{
+  margin-top: 50px;
+}
+
+.maxh{
+  max-height: 100px;
+}
+.positionerr{
+  position: fixed;
+  top: 1%;
+  left:  1%;
+justify-content: flex-start;
+align-items: flex-start;
+direction: ltr;
+}
+.popupfix2{
+  
+  margin-top: 5px;
+  background-color: rgb(168, 75, 17);
+padding: 10px 20px 10px 20px;
+border-radius: 20px;
+  direction: rtl;
+
+}
+.popupfix{
+ 
+  margin-top: 5px;
+  background-color: rgb(113, 159, 215);
+padding: 10px 20px 10px 20px;
+border-radius: 20px;
+  direction: rtl;
+
+
+}
+.paddmsg{
+  padding: 10px;
+}
+.usernotactiveorder{
+  min-height: 50px;
+  
+ padding: 10px;
+ border-radius: 20px;
+  background-color: rgb(107, 183, 2);
+
+  direction: rtl;
+
+}
+.h100{
+height: 100%;
+} .w100{
+  width: 100%;
+}
+
+.popupwindow{
+height: 100%;
+width: 100%;
+  background-color: white;
+  padding: 20px;
+}
+
+.redbg{
+  background-color: rgb(242, 193, 193);
+}
+.colorred{
+  color: red;
+
+}
+.cw{
+  color: white;
+  border-color: white !important;
+}
+
+.maxwidtable{
+  max-width: 1000px;
+}
+.inputEmp{
+  height: 40px;
+}
+
+.indivcheck{
+ margin-top: 15px;
+ margin-bottom: 15px;
+}
+
+.providerbuton{
+  padding: 20px;
+  background-color: white;
+  border: 1px solid black;
+
+}
+.compenyname{
+  color: royalblue;
+}
+.btnLink{
+ padding: 10px 20px 10px 20px;
+ background-color: aliceblue;
+ color: royalblue;
+ text-decoration: none;
+}
+.grid-1{
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.headersmallbtn{
+  font-weight: 900;
+  font-size: 1.6rem;
+}
+
+
+
+
+.minmaxc{
+  max-height: 100px;
+}
+.imgor{
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.orderadminuser{
+  min-width: 600px;
+  justify-content: space-evenly;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
