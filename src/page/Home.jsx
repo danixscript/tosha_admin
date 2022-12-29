@@ -56,13 +56,63 @@ function Home() {
 
   } 
 
+
+function ggg(){
+  console.log('jkhkhgkhju')
+}
+  
+  async function getAllDohh(){
+
+    try{
+        await
+        axiosConfig
+        .get("/admin/getdohh"
+       
+        ) 
+        .then((res) => {
+          if(res.data.err){
+            dispatch({type:MSG,data:res.data.err})
+      
+          }else{
+           if(res.data){
+            
+            dispatch({type:MSG,data:res.data.msg})
+
+
+         
+            
+           }
+  
+      
+          }
+        })
+        .catch((err) => {
+          dispatch({type:MSG,data:{msg:"somthing wrong",type:"bad"}})
+        });
+  
+    }catch(e){
+        dispatch({
+            type:MSG,
+            data:{msg:'errrrrrrr',type:'bad'},
+        })
+    }
+  }
+
+ 
+
   return (
     <div className="App">
       <h1>פרטים על החנות שלך</h1>
-      <GridHomeS TASit={TASit} totalCountOfOrders={totalCountOfOrders33} numberOfSells={numberOfSells} />
+     
+
+
+      <GridHomeS  TASit={TASit} totalCountOfOrders={totalCountOfOrders33} numberOfSells={numberOfSells} />
+
+      
  
 <GridHome mostPopular={mostPopularState} />
-
+<button onClick={getAllDohh} >דוח חנות</button>
+      <button onClick={ggg}>ffffffff</button>
     </div>
   );
 }

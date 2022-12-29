@@ -8,7 +8,7 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 4001
+EXPOSE 4000
 
 VOLUME [ "/app/node_modules" ]
 

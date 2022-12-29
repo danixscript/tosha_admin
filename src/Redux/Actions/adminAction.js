@@ -216,3 +216,9 @@ export const removeEmployeeNow = (data) => async (dispatch)=>{
       })
   }
 }
+
+
+
+
+
+
