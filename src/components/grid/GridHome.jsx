@@ -25,7 +25,7 @@ export default function GridHome(props) {
           <Item className='w100 h100'>
          
          <div className="chartdiv">
-         <h1>   המוצר שנקנה הכי הרבה פעמים  </h1>
+         <h1>       המוצר הנמכר ביותר  </h1>
 
           <ChartMostPopular data={props.mostPopular}/>
 

@@ -32,7 +32,13 @@ const reducer = (state = initialState, action) => {
       setOrderInfo.user_order_ifo_page = action.data
       return setOrderInfo;
 
-
+      case actionTypes.CLEARUSERORDERINFO:
+        const fagaga = {
+          ...state,
+        };
+        fagaga.user_order_info =[]
+        fagaga.user_order_ifo_page=[]
+        return fagaga;
 
 
 

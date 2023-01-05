@@ -43,8 +43,10 @@ export default function GridHomeS(props) {
     <strong>   כמה עסקאות בוצעו עד כה </strong> {props.totalCountOfOrders}
     </p>   
     <br /><br />
-<p><strong>סך מחירות עד כה </strong> {props.numberOfSells}</p>     
+<p><strong>סך מכירות  : </strong> {props.numberOfSells}</p>     
 <br />
+<button className="buttonAll btnlog" onClick={props.getAllDohh} >דוח חנות</button>
+
        
 
             </div>

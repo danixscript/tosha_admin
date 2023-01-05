@@ -30,6 +30,7 @@ import UserOrderInfoPage from "../page/UserOrderInfoPage";
 import AddMaterialPage from "../page/AddMaterialPage";
 import UsersScreen from "../page/UsersScreen";
 import ProvidersInfoPage from "../page/ProvidersInfoPage";
+import UserInfoScreen from "../page/UserInfoScreen";
 
 
 
@@ -82,6 +83,10 @@ dispatch(adminloguot())
 
 <Route path="/profile" element={ <PrivateRoute />} exact> 
 <Route path="/profile" element={<ProfileScreen/>} exact/>
+</Route>
+
+<Route path="/userinfi" element={ <PrivateRoute />} exact> 
+<Route path="/userinfi" element={<UserInfoScreen/>} exact/>
 </Route>
 
 <Route path="/providerinfo" element={ <PrivateRoute />} exact> 

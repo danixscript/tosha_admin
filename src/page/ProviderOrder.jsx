@@ -26,7 +26,13 @@ dispatch(getAllProviders())
 
 
 
-
+let arr = [
+  'א-ד 8:00-13:00',
+  'ב-ג-ו 8:00-18:00',      
+  'ג-ד 8:00-17:00',
+  'א-ב-ה 8:00-13:00',
+  'א-ד 6:00-15:00', '-ד 10:00-22:00'
+]
 
 
 
@@ -36,13 +42,18 @@ dispatch(getAllProviders())
         <h1>בחירת הזמנה לפי ספק</h1>
         {providers.providers.length > 0 ?
       <div className="grid-1">
-        {providers.providers.map((e)=>{
+        {providers.providers.map((e,i)=>{
           return(
               <NavLink className={'providerbuton flexcol '} to={'/productlist'} state={{providerid:e.id,stillOrder:true}} >
                <div className="providerBlock">
+        
 <p className="headersmallbtn"> {e.name}</p>
              
               {e.cat}
+              <p className="p">
+                 {arr[i]}
+              </p>
+             
               </div>
               </NavLink>
             

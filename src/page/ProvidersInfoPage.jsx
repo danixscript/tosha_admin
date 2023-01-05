@@ -93,18 +93,25 @@ function ProvidersInfoPage(props) {
 
   return (
     <div className="App">
-        <h1>   דוח מצב הספק שלך </h1>
+<div className="flexcol center">
+<div className="w70">
+<h1>   דוח מצב הספק שלך </h1>
 <h1>ספק בשם : {providers.singleProvider.name}  </h1> 
 
 <EditProviderForm EditProvider={EditProvider} />
 
 
+</div>
+
+</div>
 
 
+<h1>כפתור דוח ספקים   </h1>
+<p className="p"> הדוח ישלח למאפית תושה ישירות למייל </p>
+<p className="p">היה מוכן לקבל קובץ XL</p>
+<br />
 
-<h1>all providers orders</h1>
-
-<button onClick={getProviderOrrers} >getDoh</button>
+<button className="buttonAll btnlog" onClick={getProviderOrrers} >דוח ספקים מלא</button>
 {MAGSTATE}
 {/* 
 <ProvidersOrderTable /> */}

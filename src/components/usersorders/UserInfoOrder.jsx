@@ -13,7 +13,7 @@ import { NavLink } from "react-router-dom";
 
 
 
-export default function UsersOrdersTable(props) {
+export default function UserInfoOrder(props) {
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -39,7 +39,7 @@ export default function UsersOrdersTable(props) {
               <TableCell align="right" component="th" scope="row">
                <NavLink to='/userorderinfo' state={{id:row.id}}>{row.id }  לפרטים   </NavLink>
               </TableCell>
-              <TableCell align="right">{row.userorderdate}</TableCell>
+              <TableCell align="right">{row.date}</TableCell>
               <TableCell align="right">{row.orderprice}</TableCell>
               <TableCell align="right">{row.active == 1 ? 'הזמנה שולמה בהצלחה':"הזמנה לא שולמה"}</TableCell>
               {row.uptofiftin != null ? 

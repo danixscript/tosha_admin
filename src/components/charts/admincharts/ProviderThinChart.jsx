@@ -20,7 +20,7 @@ import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Resp
 
     return (
       <div className="h100 w100">
-        <h1> המוצר שנקנה הכי הרבה פעמים מספק <span className='compenyname'>{props.data.length > 0? props.data[0].name : ''}</span></h1>
+        <h1>      המוצר שנרכש ביותר מספק <span className='compenyname'>{props.data.length > 0? props.data[0].name : ''}</span></h1>
 
         <ResponsiveContainer width="100%" className={'chartt'} height="100%">
         <BarChart

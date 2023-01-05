@@ -21,7 +21,7 @@ export default function AdminMaterialTable(props) {
             <TableCell align="right"> שם חברה</TableCell>
             <TableCell align="right">נקודת איזון</TableCell>
             <TableCell align="right"> כמות</TableCell>
-            <TableCell align="right">מיקום במחסן</TableCell>
+         
             <TableCell align="right"> מחיר מוצר</TableCell>
             <TableCell align="right"> מיקום מוצר</TableCell>
             <TableCell align="right"> עדכון מוצר</TableCell>
@@ -35,11 +35,11 @@ export default function AdminMaterialTable(props) {
               key={row.materialid}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
             >
-              <TableCell component="th" scope="row">
+              <TableCell align="right" component="th" scope="row">
                 {row.quantity}
                 <span>X</span>
               </TableCell>
-              <TableCell component="th" scope="row">
+              <TableCell align="right" component="th" scope="row">
                 <img src={row.materialimg} alt="" className="img maxh30" />
               </TableCell>
               <TableCell align="right">{row.materialname}</TableCell>
@@ -49,7 +49,7 @@ export default function AdminMaterialTable(props) {
               <TableCell align="right">
           {row.quantity}
               </TableCell>
-              <TableCell align="right">{row.place}</TableCell>
+      
 
               <TableCell align="right">{row.materialcoast}.00</TableCell>
               <TableCell align="right">{row.place}</TableCell>

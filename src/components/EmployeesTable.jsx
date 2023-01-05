@@ -20,6 +20,8 @@ export default function EmployeesTable(props) {
             <TableCell>שם</TableCell>
             <TableCell align="right">מספר</TableCell>
             <TableCell align="right">תאריך</TableCell>
+            <TableCell align="right">טלפון</TableCell>
+
             <TableCell align="right">הרשאות</TableCell>
             <TableCell align="right">Protein&nbsp;(g)</TableCell>
           </TableRow>
@@ -35,11 +37,31 @@ export default function EmployeesTable(props) {
               </TableCell>
               <TableCell align="right">{row.id}</TableCell>
               <TableCell align="right">{row.date}</TableCell>
-              <TableCell align="right">{row.permissions}</TableCell>
+              <TableCell align="right">          
+                   <input type="number" placeholder={row.phone}  onChange={props.getphone} />
+              <button onClick={()=>{props.updateEmployeePhone(row)}} >עדכן</button>
+                            
+                            </TableCell>
+
+              <TableCell align="right">
+           
+{props.permissions == 1 ?
+          <div>
+            {row.permissions == 0 ? 
+                 <button onClick={()=>{props.updateEmployeePermissieons(1,row.id)}} > תן הרשאה</button>
+                :     <button onClick={()=>{props.updateEmployeePermissieons(0,row.id)}} > הורד הרשאה</button>}
+          </div>
+
+:''}             
+                </TableCell>
+
+            
+
              {props.permissions == 1?
                            <TableCell align="right" ><button id={row.id} onClick={props.removeEmployee}>remove number  {row.id}</button></TableCell>
 
             :'you cannot delete admins'}
+
             </TableRow>
           ))}
         </TableBody>

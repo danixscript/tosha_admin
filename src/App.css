@@ -8,6 +8,9 @@ body{
   background-color: purple;
   color: white;
 }
+.w70{
+  width: 70%;
+}
 .flexrow{
   display: flex;
   flex-direction: row;

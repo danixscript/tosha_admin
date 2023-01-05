@@ -57,9 +57,7 @@ function Home() {
   } 
 
 
-function ggg(){
-  console.log('jkhkhgkhju')
-}
+
   
   async function getAllDohh(){
 
@@ -106,13 +104,12 @@ function ggg(){
      
 
 
-      <GridHomeS  TASit={TASit} totalCountOfOrders={totalCountOfOrders33} numberOfSells={numberOfSells} />
+      <GridHomeS getAllDohh={getAllDohh}  TASit={TASit} totalCountOfOrders={totalCountOfOrders33} numberOfSells={numberOfSells} />
 
       
  
-<GridHome mostPopular={mostPopularState} />
-<button onClick={getAllDohh} >דוח חנות</button>
-      <button onClick={ggg}>ffffffff</button>
+<GridHome  mostPopular={mostPopularState} />
+ 
     </div>
   );
 }

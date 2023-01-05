@@ -52,7 +52,7 @@ function ProductStore() {
       <ProductList
        
         addProduct={addProduct}
-        list={productSource.products}
+        list={productSource.products} 
       />
     </div> 
   );

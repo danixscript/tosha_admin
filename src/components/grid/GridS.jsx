@@ -33,7 +33,7 @@ export default function GridS(props) {
         </Grid>
         <Grid xs={6} md={4}>
           <Item className='w100 h100'>
-            <h1>   קניית מוצרים לפי יום </h1>
+            <h1>      הזמנות מוצרים לפי יום </h1>
             <div className="chartdiv">
             <ChartFull orderStats={props.orderStats}/>
 

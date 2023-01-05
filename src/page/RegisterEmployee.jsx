@@ -5,12 +5,13 @@ import {useFormik} from "formik"
 import { Navigate,NavLink } from "react-router-dom";
 import {useDispatch,useSelector} from "react-redux";
 import AddEmployee from "../components/AddEmployee";
-import { getAllEmployees, registerEmployee, removeEmployeeNow } from "../Redux/Actions/adminAction";
+import { getAllEmployees, registerEmployee, removeEmployeeNow, updateEmployeePermissieonsNow, updateEmployeephoneNow } from "../Redux/Actions/adminAction";
 import EmployeesTable from "../components/EmployeesTable";
 
 function RegisterEmployee() {
   const workers = useSelector((state) => state.adminregister);
   const admin = useSelector((state) => state.admin);
+  const [PhoneState,setPhoneState] = useState(0)
 
   const dispatch = useDispatch();
   const [errState, setErrState] = useState("");
@@ -35,6 +36,20 @@ function RegisterEmployee() {
 getAllWorkers()
   },[])
 
+
+  function getphone(e){  
+    setPhoneState(e.target.value)
+
+  }
+
+  function updateEmployeePhone(e){
+    dispatch(updateEmployeephoneNow({phone:PhoneState,id:e.id,permissions:admin.admin.permissions}))
+  }
+
+
+  function updateEmployeePermissieons(e,id){
+    dispatch(updateEmployeePermissieonsNow({permissionsSElect:e,id:id,permissions:admin.admin.permissions}))
+  }
 
   function getAllWorkers(){
    
@@ -61,7 +76,7 @@ getAllWorkers()
       <AddEmployee createEmployee={createEmployee}/>
 <br /><br />
       <div>
-    <EmployeesTable permissions={admin.admin.permissions} removeEmployee={removeEmployee} workers={workers.adminworkers}/>
+    <EmployeesTable updateEmployeePermissieons={updateEmployeePermissieons} updateEmployeePhone={updateEmployeePhone} getphone={getphone} permissions={admin.admin.permissions} removeEmployee={removeEmployee} workers={workers.adminworkers}/>
         </div>
 </div>
   

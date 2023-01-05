@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { notActiveOrders} from "../Redux/Actions/UserFilterOrders";
 import { NavLink,useLocation } from "react-router-dom";
 import { acceptUserorderNow, desableOrderNow, getOrderInfoById } from "../Redux/Actions/usersOrdersActions";
+import UORItable from "../components/usersorders/UORItable";
+import { CLEARUSERORDERINFO } from "../Redux/constants/usersOrderContent";
 
 function UserOrderInfoPage() {
   const admin = useSelector((state) => state.admin);
@@ -24,6 +26,7 @@ getget()
   function getget(){
 
     // לעשות קליר להזמנות 
+    dispatch({type:CLEARUSERORDERINFO})
 
     
     dispatch(getOrderInfoById(location.state.id))
@@ -49,41 +52,21 @@ getget()
 
 
     return (
-      <div className="flexcol center">
+      <div className="flexcol ">
         <h1>  {location.state.id}      פירוט הזמנה</h1>
 
-<div className="orderInfo ">
-    {usersorders.user_order_ifo_page.map((e)=>{
-      
-        return(
-            <div className="flexrow ber orderadminuser w100">
-             <div>
-              מספר:
-             {e.orderinfoid} 
-             </div>
-                <div>
-                  מחיר
-                {e.userproductprice}
-                </div>
-                <div>
-                  כמות:
-                {e.userproductquantity}
-                </div>
 
-                <div>
-                  סוג הזמנה:
-                {e.ordertype}
-                </div>
-                <div className="minmaxc"> 
-                  <img src={e.userproductimg} alt="" className="img imgor" />
-                </div>
 
-               
-            </div>
-        )
-    })}
-  {usersorders.user_order_ifo_page.length > 0 ?
+
+<UORItable list={usersorders.user_order_ifo_page}/>
+
+{usersorders.user_order_ifo_page.length > 0 ?
   <div className="f">
+
+<div className=" גראך">
+  <h4>הערות לקוח</h4>
+{usersorders.user_order_ifo_page[0].text}
+</div>
  
   <div>
     {usersorders.user_order_ifo_page[0].active == null ?
@@ -106,9 +89,6 @@ getget()
   </div>
   </div> 
  :"" }
-
-
-</div>
    
  
   

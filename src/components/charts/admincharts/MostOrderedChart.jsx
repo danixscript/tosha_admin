@@ -20,7 +20,7 @@ import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Resp
 
     return (
       <div className="h100 w100">
-        <h1>   המוצר שנקנה הכי הרבה פעמים  </h1>
+        <h1>       המוצר הנרכש ביותר </h1>
 
         <ResponsiveContainer >
         <BarChart

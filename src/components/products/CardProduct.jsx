@@ -39,15 +39,12 @@ export default function MediaCard(props) {
       </CardContent>
       <CardActions>
         <Button onClick={()=>{props.addProduct(props.item,sumState)}} size="small">הוסף לסל</Button>
-        <select
-        className=""
-         onChange={getSum}
-        >
-          <option value="5">5</option>
-          <option value="15">15</option>
-          <option value="25">25</option>
+      
+      
+      <input  onChange={getSum} type="number"  />
+  
 
-        </select>
+
       </CardActions>
     </Card>
   );

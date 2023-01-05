@@ -32,7 +32,7 @@ setUp()
   
     return (
       <div className="h100 w100">
-        <h1>קניות שנעשו לפי תאריך</h1>
+        <h1> הזמנות לפי תאריך</h1>
         <ResponsiveContainer width="100%" height="100%">
         <ComposedChart
           width={500}

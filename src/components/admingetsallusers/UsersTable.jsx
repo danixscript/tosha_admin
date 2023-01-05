@@ -6,6 +6,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -38,7 +39,11 @@ export default function UsersTable(props) {
 
               </TableCell>
           
-              <TableCell align="right">{row.name}</TableCell>
+              <TableCell align="right">
+                <NavLink to={'/userinfi'} state={{data:row}} >
+                {row.name}
+                </NavLink>
+                </TableCell>
               <TableCell align="right">({row.email})</TableCell>
                           
                             <TableCell align="right">({row.phone})</TableCell>

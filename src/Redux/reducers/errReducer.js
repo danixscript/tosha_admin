@@ -16,9 +16,15 @@ const products = (state = initialState, action) => {
       const msg = {
         ...state,
       };
-      msg.msg = action.data.msg || "somthing wrong"
+     if(action.data){
+      msg.msg = action.data.msg || "ישנה בעיה"
       msg.active_message = true
       msg.type = action.data.type
+     }else{
+      msg.msg = ''
+      msg.active_message = false
+      msg.type = ''
+     }
 
       return msg;
 
