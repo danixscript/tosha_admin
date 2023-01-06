@@ -21,7 +21,7 @@ const [providerState,setProviderState] = useState({})
 
   useEffect(()=>{
 dispatch(getAllProviders())
-  })
+  },[])
 
 
 
