@@ -16,15 +16,15 @@ export default function ActiveProductTable(props) {
         <TableHead>
           <TableRow>
             <TableCell>קוד מוצר</TableCell>
-            <TableCell align="right">תמונה</TableCell>
-            <TableCell align="right">שם מוצר</TableCell>
-            <TableCell align="right"> מספר חברה</TableCell>
-            <TableCell align="right">מחיר</TableCell>
-            <TableCell align="right">כמות</TableCell>
-            <TableCell align="right">מיקום במחסן</TableCell>
-            <TableCell align="right"> מצב מוצר</TableCell>
-            <TableCell align="right">  עדכן מוצר</TableCell>
-            <TableCell align="right">   מחק מוצר</TableCell>
+            <TableCell align="right"> <p className="pnow">תמונה</p></TableCell>
+            <TableCell align="right"> <p className="pnow">שם מוצר</p></TableCell>
+            <TableCell align="right"> <p className="pnow"> מספר חברה</p></TableCell>
+            <TableCell align="right"> <p className="pnow">מחיר</p></TableCell>
+            <TableCell align="right"> <p className="pnow">כמות</p></TableCell>
+            <TableCell align="right"> <p className="pnow">מיקום במחסן</p></TableCell>
+            <TableCell align="right"> <p className="pnow"> מצב מוצר</p></TableCell>
+            <TableCell align="right"> <p className="pnow">  עדכן מוצר</p></TableCell>
+            <TableCell align="right"> <p className="pnow">   מחק מוצר</p></TableCell>
 
           </TableRow>
         </TableHead>
@@ -36,32 +36,32 @@ export default function ActiveProductTable(props) {
            sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
          >
            <TableCell component="th" scope="row">
-             {row.id}
+          <p className="pnow"> {row.id}</p>
            </TableCell>
            <TableCell component="th" scope="row">
              <img src={row.productimg} alt="" className="img maxh30" />
            </TableCell>
-           <TableCell align="right">{row.itemname}</TableCell>
+           <TableCell align="right"><p className="pnow">{row.itemname}</p></TableCell>
            <TableCell align="right">
-             ({row.idprovider}){row.providername}
+             <p className="pnow">({row.idprovider}){row.providername}</p>
            </TableCell>
            <TableCell align="right">
-             {row.price}.00 
+             <p className="pnow">{row.price}.00  ש"ח</p>
            </TableCell>
 
            <TableCell align="right">
-             {row.quantity}
+            <p className="pnow"> {row.quantity}</p>
           
            </TableCell>
-           <TableCell align="right">{row.place}</TableCell>
+           <TableCell align="right"><p className="pnow">{row.place}</p></TableCell>
 
            {props.active == 1 ? (
-             <TableCell align="right"> מוצר מופיע בחנות</TableCell>
+             <TableCell align="right">   <p className="pnow">מוצר מופיע בחנות</p></TableCell>
            ) : (
-             <TableCell align="right"> מוצר לא מופיע בחנות </TableCell>
+             <TableCell align="right">  <p className="pnow">מוצר לא מופיע בחנות</p>   </TableCell>
            )}
                           
-                           <TableCell align="right"> <NavLink to={'/productpage'} state={{product:row}} >עדכן מוצר</NavLink></TableCell>
+                           <TableCell align="right"> <p className="pno"><NavLink to={'/productpage'} state={{product:row}} >עדכן מוצר</NavLink></p></TableCell>
                            <TableCell align="right"><DeleteOrder text='מחק' data={row} func={props.deleteProduct} ></DeleteOrder></TableCell>
 
          </TableRow>:

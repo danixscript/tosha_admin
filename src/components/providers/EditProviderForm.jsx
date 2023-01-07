@@ -88,6 +88,17 @@ function EditProviderForm(props) {
           name="cat"
           id="cat"
         />
+                <label htmlFor="address">יום הזמנה:</label>
+
+         <input
+          type="text"
+          className="inputEmp"
+          values={props.EditProvider.values.day}
+          value={props.EditProvider.values.day}
+          onChange={props.EditProvider.handleChange}
+          name="day"
+          id="day"
+        />
         <br />
 
         <button className="btn" type="submit">

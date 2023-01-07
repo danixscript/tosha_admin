@@ -40,7 +40,8 @@ export default function OrdersAcordeon(props) {
 
 
               <TableCell align="right" component="th" scope="row">
-               <NavLink to='/orderinfo' state={{orderid:row.adminorderid,totalprice:row.totalprice}}>{row.adminorderid }  לפרטים   </NavLink>
+             
+               <p className="pnow"><NavLink to='/orderinfo' state={{orderid:row.adminorderid,totalprice:row.totalprice}}>{row.adminorderid }  לפרטים   </NavLink></p>
               </TableCell>
               <TableCell align="right"><p className="pnow">{row.date.split('.')[0]}</p></TableCell>
               <TableCell align="right"><p className="pnow">{row.providername}</p></TableCell>

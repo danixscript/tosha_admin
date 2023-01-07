@@ -76,6 +76,7 @@ function ProvidersInfoPage(props) {
       email:location.state.provider.email,
       zipcode:location.state.provider.zipcode,
       cat:location.state.provider.cat,
+      day:location.state.provider.day,
       permissions:admin.admin.permissions
   },onSubmit:async values  => {
     try{

@@ -37,22 +37,22 @@ export default function AdminProductTable(props) {
               className={row.quantity < row.minimum ? "bgred":''}
             >
               <TableCell align="right" component="th" scope="row">
-                {row.quantity}
-                <span>X</span>
+              <p className="pnow">  כמות{row.quantity} {row.minimum}  
+                <span>X</span></p>
               </TableCell>
               <TableCell component="th" scope="row">
                 <img src={row.productimg} alt="" className="img maxh30" />
               </TableCell>
-              <TableCell align="right">{row.itemname}</TableCell>
+              <TableCell align="right"><p className="pnow">{row.itemname}</p></TableCell>
               <TableCell align="right">
-                ({row.idprovider}){row.providername}
+                <p className="pnow">({row.idprovider}){row.providername}</p>
               </TableCell>
               <TableCell align="right">
-                {row.price}.00  ש"ח
+                <p className="pnow">{row.price}.00  ש"ח</p>
               </TableCell>
 
               <TableCell align="right">
-                {row.id}
+              <p className="pnow">  {row.id}</p>
                 {/* <select className='flexcol' onChange={(e)=>{props.changeAmount(row,e)}} name="" id="">
              <option className='theAmount' value={row.amount}>{row.amount}</option>
              {Array.from({ length: 500 }).map((_,i)=>{
@@ -68,15 +68,15 @@ export default function AdminProductTable(props) {
               })}
              </select> */}
               </TableCell>
-              <TableCell align="right">{row.place}</TableCell>
+              <TableCell align="right"><p className="pnow">{row.place}</p></TableCell>
 
               {row.active == 1 ? (
-                <TableCell align="right">  מופיע בחנות</TableCell>
+                <TableCell align="right">  <p className="pnow">מופיע בחנות</p> </TableCell>
               ) : (
-                <TableCell align="right"> מוצר לא מופיע בחנות </TableCell>
+                <TableCell align="right"> <p className="pnow">מוצר לא מופיע בחנות </p></TableCell>
               )}
                              
-                              <TableCell align="right"> <NavLink to={'/productpage'} state={{product:row}} >עדכן מוצר</NavLink></TableCell>
+                              <TableCell align="right"> <p className="pnow"><NavLink to={'/productpage'} state={{product:row}} >עדכן מוצר</NavLink></p></TableCell>
 {props.permissions == 1 ? 
                               <TableCell align="right"><DeleteOrder text='מחק' data={row} func={props.deleteProduct} ></DeleteOrder></TableCell>
 :                              <TableCell align="right">אין באפשרותך למחוק מוצר זה</TableCell>

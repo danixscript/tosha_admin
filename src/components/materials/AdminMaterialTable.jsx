@@ -16,17 +16,17 @@ export default function AdminMaterialTable(props) {
         <TableHead>
           <TableRow>
             <TableCell>כמות מוצר</TableCell>
-            <TableCell align="right">תמונה</TableCell>
-            <TableCell align="right">שם מוצר</TableCell>
-            <TableCell align="right"> שם חברה</TableCell>
-            <TableCell align="right">נקודת איזון</TableCell>
-            <TableCell align="right"> כמות</TableCell>
+            <TableCell align="right" ><p className="pnow">תמונה</p></TableCell>
+            <TableCell align="right" ><p className="pnow">שם מוצר</p></TableCell>
+            <TableCell align="right" ><p className="pnow"> שם חברה</p></TableCell>
+            <TableCell align="right" ><p className="pnow">נקודת איזון</p></TableCell>
+            <TableCell align="right" ><p className="pnow"> כמות</p></TableCell>
          
-            <TableCell align="right"> מחיר מוצר</TableCell>
-            <TableCell align="right"> מיקום מוצר</TableCell>
-            <TableCell align="right"> עדכון מוצר</TableCell>
+            <TableCell align="right" ><p className="pnow"> מחיר מוצר</p></TableCell>
+            <TableCell align="right" ><p className="pnow"> מיקום מוצר</p></TableCell>
+            <TableCell align="right" ><p className="pnow"> עדכון מוצר</p></TableCell>
 
-            <TableCell align="right"> מחק מוצר</TableCell>
+            <TableCell align="right" ><p className="pnow"> מחק מוצר</p></TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -34,25 +34,29 @@ export default function AdminMaterialTable(props) {
             <TableRow
               key={row.materialid}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+              className={row.quantity < row.minimum ? 'bgred ':''}
             >
-              <TableCell align="right" component="th" scope="row">
-                {row.quantity}
-                <span>X</span>
+              <TableCell align="right"  component="th" scope="row">
+              <p className="pnow">
+              {row.quantity}<span>X</span>
+              </p>
+                
               </TableCell>
               <TableCell align="right" component="th" scope="row">
                 <img src={row.materialimg} alt="" className="img maxh30" />
               </TableCell>
-              <TableCell align="right">{row.materialname}</TableCell>
-              <TableCell align="right">{row.providername}</TableCell>
+              <TableCell align="right"><p className="pnow">{row.materialname}</p></TableCell>
+              <TableCell align="right"><p className="pnow">{row.providername}</p></TableCell>
 
-              <TableCell align="right">{row.minimum}</TableCell>
+              <TableCell align="right"><p className="pnow">
+              {row.minimum}</p></TableCell>
               <TableCell align="right">
-          {row.quantity}
+        <p className="pnow">  {row.quantity}</p>
               </TableCell>
       
 
-              <TableCell align="right">{row.materialcoast}.00</TableCell>
-              <TableCell align="right">{row.place}</TableCell>
+              <TableCell align="right"><p className="pnow">{row.materialcoast}.00 ש"ח</p></TableCell>
+              <TableCell align="right"><p className="pnow">{row.place}</p></TableCell>
 
               {/* {props.active == 1 ? (
                 <TableCell align="right"> מוצר מופיע בחנות</TableCell>
@@ -63,9 +67,11 @@ export default function AdminMaterialTable(props) {
 
               <TableCell align="right">
                 
-                <NavLink to={"/materialpage"} state={{ product: row }}>
+               <p className="pnow">
+               <NavLink to={"/materialpage"} state={{ product: row }}>
                   פרטי מוצר והגדרות
                 </NavLink>
+               </p>
               </TableCell>
 
               {props.permissions == 1 ? (

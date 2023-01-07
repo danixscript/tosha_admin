@@ -22,7 +22,7 @@ import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Resp
 
     return (
       <div className="h100 w100">
-        <h1>             מאיזה ספק קניתי בהכי הרבה כסף </h1>
+        <h1>                  עלות הזמנות לפי ספק </h1>
         <p>סכום כל ההזמנות שלי לפי ספק</p>
 
         <ResponsiveContainer width={'100%'} aspect={3} >
