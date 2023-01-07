@@ -100,7 +100,7 @@ function Home() {
 
   return (
     <div className="App">
-            <h1> דף הבית  </h1>
+            <h1> דף הבית  אברי המלךךךךך </h1>
 
       <h1>פרטים על החנות שלך</h1>
      
