@@ -69,7 +69,7 @@ export default function AdminMaterialTable(props) {
                 
                <p className="pnow">
                <NavLink to={"/materialpage"} state={{ product: row }}>
-                  פרטי מוצר והגדרות
+                  פרטי מוצר 
                 </NavLink>
                </p>
               </TableCell>

@@ -37,6 +37,7 @@ function removeUser(e){
 
     return (
       <div className="flexcol center">
+        <h1>ניהול לקוחות</h1>
       <UsersTable unBandUser={unBandUser}  removeUser={removeUser} bandUser={bandUser} permissions={admin.admin.permissions} list={usersRed.users}/>
 
   

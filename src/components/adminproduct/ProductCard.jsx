@@ -68,7 +68,7 @@ export default function ProductCard(props) {
           {props.product.active == 1 ? 
           <DeleteOrder text="הורד מהמדף" data={props.product} func={props.removeItemFromDisplay} >   </DeleteOrder>
         :
-        <AcceptButton func={props.activeProductHere} data={props.product} text="עדכון להפעלת מוצר" >  </AcceptButton>}
+        <AcceptButton func={props.activeProductHere} data={props.product} text="  הוסף מוצר לתפריט" >  </AcceptButton>}
         </IconButton>
        
       </CardActions>
