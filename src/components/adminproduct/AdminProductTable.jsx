@@ -16,16 +16,16 @@ export default function AdminProductTable(props) {
       <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
         <TableHead>
           <TableRow>
-            <TableCell>כמות מוצר</TableCell>
-            <TableCell align="right">תמונה</TableCell>
-            <TableCell align="right">שם מוצר</TableCell>
-            <TableCell align="right"> מספר חברה</TableCell>
-            <TableCell align="right">מחיר</TableCell>
-            <TableCell align="right">מספר מוצר</TableCell>
-            <TableCell align="right">מיקום במחסן</TableCell>
-            <TableCell align="right"> מצב מוצר</TableCell>
-            <TableCell align="right">  עדכן מוצר</TableCell>
-            <TableCell align="right">   מחק מוצר</TableCell>
+            <TableCell align="right"><p className="pnow">כמות מוצר</p></TableCell>
+            <TableCell align="right"><p className="pnow">תמונה</p></TableCell>
+            <TableCell align="right"><p className="pnow">שם מוצר</p></TableCell>
+            <TableCell align="right"><p className="pnow"> מספר חברה</p></TableCell>
+            <TableCell align="right"><p className="pnow">מחיר</p></TableCell>
+            <TableCell align="right"><p className="pnow">מספר מוצר</p></TableCell>
+            <TableCell align="right"><p className="pnow">מיקום במחסן</p></TableCell>
+            <TableCell align="right"><p className="pnow"> מצב מוצר</p></TableCell>
+            <TableCell align="right"><p className="pnow">  עדכן מוצר</p></TableCell>
+            <TableCell align="right"><p className="pnow">   מחק מוצר</p></TableCell>
 
           </TableRow>
         </TableHead>
@@ -36,7 +36,7 @@ export default function AdminProductTable(props) {
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
               className={row.quantity < row.minimum ? "bgred":''}
             >
-              <TableCell component="th" scope="row">
+              <TableCell align="right" component="th" scope="row">
                 {row.quantity}
                 <span>X</span>
               </TableCell>
@@ -48,7 +48,7 @@ export default function AdminProductTable(props) {
                 ({row.idprovider}){row.providername}
               </TableCell>
               <TableCell align="right">
-                {row.price}.00 
+                {row.price}.00  ש"ח
               </TableCell>
 
               <TableCell align="right">
