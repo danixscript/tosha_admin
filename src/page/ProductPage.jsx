@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink, useLocation } from "react-router-dom";
 import ProductCard from "../components/adminproduct/ProductCard";
-import { activeProductNow, DeactiveProductNow, setMinNow, setPriceNow, setSingleProductNow } from "../Redux/Actions/adminProductActions";
+import { activeProductNow, DeactiveProductNow, setMinNow, setPriceNow, setProdQuantityNow, setSingleProductNow } from "../Redux/Actions/adminProductActions";
 
 function ProductPage(props) {
   const dispatch = useDispatch();
@@ -10,11 +10,24 @@ function ProductPage(props) {
   let location = useLocation();
   const [priceState,setPriceState] = useState(0)
   const [minState,setMinState] = useState(0)
+  const [amountState,setAmountState] = useState(0)
 
   function getPrice(e){
     let intnum = parseInt(e.target.value)
     setPriceState(intnum)
 
+  }
+
+  function getAmountin(e){
+    let intnum = parseInt(e.target.value)
+    setAmountState(intnum)
+
+  }
+
+
+
+  function setProductQuantity(){
+dispatch(setProdQuantityNow({quantity:amountState,product:location.state.product}))
   }
   function getMinMin(e){
     let intnum = parseInt(e.target.value)
@@ -22,6 +35,9 @@ function ProductPage(props) {
 
   }
   useEffect(()=>{
+    setAmountState(0)
+    setMinState(0)
+    setPriceState(0)
     setSingler()
   },[])
 
@@ -62,7 +78,7 @@ function ProductPage(props) {
   return (
     <div className="App">
       <h1>מוצר {location.state.product.itemname}</h1>
-      <ProductCard removeItemFromDisplay={removeItemFromDisplay} activeProductHere={activeProductHere} setMin={setMin} getMinMin={getMinMin} getPrice={getPrice} setPrice={setPrice} product={adminProduct.singleProduct} />
+      <ProductCard setProductQuantity={setProductQuantity} getAmountin={getAmountin} removeItemFromDisplay={removeItemFromDisplay} activeProductHere={activeProductHere} setMin={setMin} getMinMin={getMinMin} getPrice={getPrice} setPrice={setPrice} product={adminProduct.singleProduct} />
    
     </div>
   );

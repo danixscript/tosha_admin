@@ -14,7 +14,6 @@ const reducer = (state = initialState, action) => {
       const loader = {
         ...state,
       };
-      console.log('l')
       loader.Loader = true
    
       return loader;

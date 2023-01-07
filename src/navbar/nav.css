@@ -4,7 +4,24 @@
     min-width: 200px;
     position: relative;
 }
-
+.activeclassname{
+    background-color: gray !important;
+    color: white;
+  
+}
+.activeclassnameprophil{
+    margin-top: 20px;
+    padding-right: 12px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 25px;
+    text-decoration: none;
+      border: 3px solid purple;
+background-color: purple;
+color: white;
+transform: translate(-50px,0);
+transition: all .4s ease-in-out;
+}
 .navlinkspos{
     position: absolute;
     bottom: 20%;
@@ -35,7 +52,8 @@
   padding-right: 12px;
   padding-top: 8px;
   padding-bottom: 8px;
- 
+  transition: all .4s ease-in-out;
+
   text-decoration: none;
 border-bottom: 2px solid black;  
   border-top: none;

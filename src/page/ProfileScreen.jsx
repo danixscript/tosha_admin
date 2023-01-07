@@ -89,7 +89,7 @@ useEffect(()=>{
   
 async function getData(){
     await axiosConfig
-        .get("/adminorder/getbunchstatistic",{params:{id:17,limit:2}})
+        .get("/adminorder/getbunchstatistic",{params:{id:1,limit:2}})
         .then((res) => {
           if (res.data.err) {
          

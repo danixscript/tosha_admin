@@ -9,12 +9,11 @@ import { NavLink } from "react-router-dom";
 
 
 function ProviderOrder() {
-  const admin = useSelector((state) => state.admin);
-  const providers = useSelector((state) => state.providers);
-const [popUpState,setPopUpState] = useState(false)
-const [providerState,setProviderState] = useState({})
-
-  const dispatch = useDispatch();
+const admin = useSelector((state) => state.admin);
+const providers = useSelector((state) => state.providers);
+const [popUpState,setPopUpState] = useState(false);
+const [providerState,setProviderState] = useState({});
+const dispatch = useDispatch();
 
 
 
@@ -26,20 +25,14 @@ dispatch(getAllProviders())
 
 
 
-let arr = [
-  'א-ד 8:00-13:00',
-  'ב-ג-ו 8:00-18:00',      
-  'ג-ד 8:00-17:00',
-  'א-ב-ה 8:00-13:00',
-  'א-ד 6:00-15:00', '-ד 10:00-22:00'
-]
+
 
 
 
 
     return (
       <div className="flexcol center">
-        <h1>בחירת הזמנה לפי ספק</h1>
+       
         {providers.providers.length > 0 ?
       <div className="grid-1">
         {providers.providers.map((e,i)=>{
@@ -51,7 +44,7 @@ let arr = [
              
               {e.cat}
               <p className="p">
-                 {arr[i]}
+                 {e.day}
               </p>
              
               </div>

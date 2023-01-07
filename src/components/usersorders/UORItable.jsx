@@ -19,10 +19,10 @@ export default function UORItable(props) {
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell align="right"> תמונה</TableCell>
-            <TableCell align="right">מחיר</TableCell>
-            <TableCell align="right">  כמות</TableCell>
-            <TableCell align="right">  סוג הזמנה</TableCell>
+            <TableCell align="right"><p className="pnow"> תמונה</p></TableCell>
+            <TableCell align="right"><p className="pnow">מחיר</p></TableCell>
+            <TableCell align="right"><p className="pnow">  כמות</p></TableCell>
+            <TableCell align="right"><p className="pnow">  סוג הזמנה</p></TableCell>
            
           </TableRow>
         </TableHead>
@@ -38,9 +38,9 @@ export default function UORItable(props) {
               <TableCell align="right" component="th" scope="row">
                 <img src={row.userproductimg} alt="" className="img maxh" />
               </TableCell>
-              <TableCell align="right">{row.userproductprice}</TableCell>
-              <TableCell align="right">{row.userproductquantity}</TableCell>
-              <TableCell align="right">{row.ordertype}</TableCell>
+              <TableCell align="right"><p className="pnow">{row.userproductprice} ש"ח</p></TableCell>
+              <TableCell align="right"><p className="pnow">{row.userproductquantity}</p></TableCell>
+              <TableCell align="right"><p className="pnow">{row.ordertype == 'SIT' ? "בלשבת":"TA"}</p></TableCell>
             
     
             </TableRow>

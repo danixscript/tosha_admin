@@ -18,13 +18,12 @@ export default function UsersTable(props) {
       <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
         <TableHead>
           <TableRow>
-            <TableCell> מספר לקוח</TableCell>
-            <TableCell align="right">שם</TableCell>
-            <TableCell align="right">מייל </TableCell>
-            <TableCell align="right">  טלפון</TableCell>
-            <TableCell align="right">כתובת</TableCell>
-            <TableCell align="right"> השאה לקוח </TableCell>
-            <TableCell align="right"> הסר לקוח </TableCell>
+            <TableCell align="right"><p className="pnow"> מספר לקוח</p></TableCell>
+            <TableCell align="right"><p className="pnow">שם</p></TableCell>
+            <TableCell align="right"><p className="pnow">מייל </p></TableCell>
+            <TableCell align="right"><p className="pnow">  טלפון</p></TableCell>
+            <TableCell align="right"><p className="pnow">כתובת</p></TableCell>
+            <TableCell align="right"><p className="pnow"> הסר לקוח </p></TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -34,25 +33,32 @@ export default function UsersTable(props) {
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
                      <TableCell align="right">   
-              {row.id}
-          
+                     <NavLink to={'/userinfi'} state={{data:row}} >
+          <p className="pnow">              לפרטים  
+              {row.id}  </p>
+          </NavLink>
 
               </TableCell>
           
               <TableCell align="right">
                 <NavLink to={'/userinfi'} state={{data:row}} >
-                {row.name}
+              <p className="pnow">  {row.name}</p>
                 </NavLink>
                 </TableCell>
-              <TableCell align="right">({row.email})</TableCell>
+              <TableCell align="right">
+                <p className="pnow">({row.email})</p>
+              </TableCell>
                           
-                            <TableCell align="right">({row.phone})</TableCell>
+                            <TableCell align="right">
+                              <p className="pnow">({row.phone})</p>
+                            </TableCell>
 
-                            <TableCell align="right">{row.address}</TableCell>
+                            <TableCell align="right">
+                              <p className="pnow">{row.address}</p>
+                            </TableCell>
 
 
 
-                            <TableCell align="right"><button onClick={row.band == 1 ?()=>{props.unBandUser(row.id)} :()=>{props.bandUser(row.id)}} > {row.band == 1 ? 'הפעל לקוח':'השאה לקוח'}</button></TableCell>
                             <TableCell align="right"><button onClick={()=>{props.Removeuser(row.id)}} >מחק לקוח</button></TableCell>
 
 

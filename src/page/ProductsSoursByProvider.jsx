@@ -1,14 +1,14 @@
 
 
-function ProductsSoursByProvider() { 
+// function ProductsSoursByProvider() { 
  
 
-    return (
-      <div className="App">
+//     return (
+//       <div className="App">
       
-      </div>
-    );
-  }
+//       </div>
+//     );
+//   }
   
-  export default ProductsSoursByProvider;
+//   export default ProductsSoursByProvider;
   

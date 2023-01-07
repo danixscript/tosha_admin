@@ -51,7 +51,7 @@ function AdminOrdersScreen() {
 
     return (
       <div className="App">
-        <h1>כל ההזמנות שלי בתור מנהל</h1>
+      <h1>הזמנות מספקים</h1>
         <OrdersAppBar filter={filterState} filterCase={filterCase} />
         <br />
         {/* <NavLink to='/notactiveorders' > להזמנות לא מאושרות</NavLink> */}

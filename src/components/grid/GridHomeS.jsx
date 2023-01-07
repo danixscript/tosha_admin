@@ -5,6 +5,7 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Unstable_Grid2';
 import ChartTAvSit from '../charts/homecharts/ChartTAvSit';
 
+import ChartMostPopular from '../charts/homecharts/ChartMostPopular';
 
 
 
@@ -60,6 +61,7 @@ export default function GridHomeS(props) {
 
 <div className="chartdiv2 paddchard">
 
+
 </div>
           </Item>
         </Grid>
@@ -67,8 +69,8 @@ export default function GridHomeS(props) {
           <Item className='w100 h100 '>
           <div className="chartdiv2 paddchard">
           
-          
-           
+          <h1>       המוצר הנמכר ביותר  </h1>
+          <ChartMostPopular data={props.mostPopular}/>
        
 
           </div>

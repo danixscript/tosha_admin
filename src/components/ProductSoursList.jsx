@@ -8,7 +8,7 @@ function ProductSoursList(props){
     return(
         <div className=" grid-3">
 
-            {props.list.length>0?
+            {props.list.length>0? 
            <div className="grid-3">
            
                     <div className="">

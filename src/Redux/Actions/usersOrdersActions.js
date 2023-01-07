@@ -104,7 +104,7 @@ import {
       await axiosConfig
         .get("/usersorders/order")
         .then((res) => {
-          if (res.data.err) {
+          if (res.data.err) { 
             return dispatch({
               type: MSG,
               data: res.data.err
@@ -146,7 +146,7 @@ import {
   //       .then((res) => {
   //         if (res.data.err) {
   //           return dispatch({
-  //             type: MSG,
+  //             type: MSG,  
   //             data: res.data.err
   //           })
   

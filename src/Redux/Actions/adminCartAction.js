@@ -2,6 +2,7 @@ import {ADD_PRODUCT_TO_CART,CHANGE_AMOUNT,CLEAR_CART,DELETE_ALL,REMOVE_PRODUCT_F
 import {ERROR,PRODUCT_FAIL,MSG} from '../constants/errConstant'
 
 import axiosConfig from "../../config/AxiosConfig";
+import { START_LOAD } from '../constants/loaderConstant.js';
 
 
 
@@ -46,6 +47,7 @@ export const buyNowNow = (data) => async (dispatch)=>{
            if(res.data){
             dispatch({type:CLEAR_CART});      
             dispatch({type:MSG,data:res.data.msg})
+            dispatch({type:START_LOAD})
 
            }
   

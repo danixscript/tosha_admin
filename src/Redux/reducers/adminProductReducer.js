@@ -94,6 +94,15 @@ const reducer = (state = initialState, action) => {
           
     
           return set_single_price;
+
+          case actionTypes.SET_QUANTITY:
+            const set_single_quantity = {
+              ...state,
+            };
+            set_single_quantity.singleProduct.quantity = action.data.quantity;
+            
+      
+            return set_single_quantity;
  
 
 

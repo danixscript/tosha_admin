@@ -32,31 +32,37 @@ export default function ProductCard(props) {
       
      
         title={props.product.itemname}
-        subheader={props.product.price + " שח "}
+        subheader={props.product.price + ' ש"ח'}
       />
       <CardMedia
         component="img"
         height="194"
         image={props.product.productimg}
         alt={props.product.productimg}
-      />
+      /> 
       <CardContent>
         <Typography variant="body2" color="text.secondary">
          {props.product.itemname}
         </Typography>
         <Typography paragraph> נקודת איזון:  {props.product.minimum}</Typography>
-        <Typography paragraph>עדכן נקודת איזון  <input onChange={props.getMinMin} type="number" placeholder={props.product.minimum} /> <button onClick={props.setMin} >עדכן</button></Typography>
+        <Typography paragraph>עדכן נקודת איזון <br /> <input onChange={props.getMinMin} type="number" placeholder={props.product.minimum} /> <button onClick={props.setMin} >עדכן</button></Typography>
 
-        <Typography paragraph>כמות במלאי:  {props.product.quantity}</Typography>
-        <Typography paragraph>מחיר:  {props.product.price}</Typography>
-        <Typography paragraph>עדכן מחיר  <input onChange={props.getPrice} type="number" placeholder={props.product.price} /> <button onClick={props.setPrice} >עדכן</button></Typography>
+        <Typography paragraph>כמות במלאי:  
+        {props.product.idprovider == 0 ?
+<div className="v">                <input onChange={props.getAmountin} type="number" placeholder={props.product.quantity} /> <button onClick={props.setProductQuantity} >עדכן</button>
+</div>
+      :
+      <p className='pnpw'>{props.product.quantity} המוצר לא שלך תצטרך לקנות</p>}
+        </Typography>
+        <Typography paragraph>עדכן מחיר <br /> <input onChange={props.getPrice} type="number" placeholder={props.product.price+' ש"ח'} /> <button onClick={props.setPrice} >עדכן</button></Typography>
+        <Typography paragraph>מחיר:  {props.product.price}ש"ח</Typography>
 
       </CardContent>
       {props.product.price > 0 ?
     
     <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
+         
         </IconButton>
         <IconButton aria-label="share">
           {props.product.active == 1 ? 

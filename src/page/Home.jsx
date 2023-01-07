@@ -100,15 +100,17 @@ function Home() {
 
   return (
     <div className="App">
+            <h1> דף הבית  </h1>
+
       <h1>פרטים על החנות שלך</h1>
      
 
 
-      <GridHomeS getAllDohh={getAllDohh}  TASit={TASit} totalCountOfOrders={totalCountOfOrders33} numberOfSells={numberOfSells} />
+      <GridHomeS getAllDohh={getAllDohh} mostPopular={mostPopularState}  TASit={TASit} totalCountOfOrders={totalCountOfOrders33} numberOfSells={numberOfSells} />
 
       
  
-<GridHome  mostPopular={mostPopularState} />
+
  
     </div>
   );

@@ -17,16 +17,16 @@ export default function AdminCartTable(props) {
       <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
         <TableHead>
           <TableRow>
-            <TableCell>כמות מוצר</TableCell>
-            <TableCell align="right">תמונה</TableCell>
+            <TableCell align="right"> <p className="pnow">כמות מוצר</p></TableCell>
+            <TableCell align="right"> <p className="pnpw">תמונה</p></TableCell>
 
-            <TableCell align="right">שם מוצר</TableCell>
+            <TableCell align="right"> <p className="pnpw">שם מוצר</p></TableCell>
             
-            <TableCell align="right">שם ומספר חברה</TableCell>
-            <TableCell align="right">מחיר</TableCell>
+            <TableCell align="right"> <p className="pnpw">שם ומספר חברה</p></TableCell>
+            <TableCell align="right"> <p className="pnpw">מחיר</p></TableCell>
 
-            <TableCell align="right">קוד מוצר</TableCell>
-            <TableCell align="right">מחיקת מוצר</TableCell>
+            <TableCell align="right"> <p className="pnpw">קוד מוצר</p></TableCell>
+            <TableCell align="right"> <p className="pnpw">מחיקת מוצר</p></TableCell>
 
           </TableRow>
         </TableHead>
@@ -39,9 +39,9 @@ export default function AdminCartTable(props) {
                      <TableCell align="right">   
               {row.amount}
              <select className='flexcol' onChange={(e)=>{props.changeAmount(row,e)}} name="" id="">
-             <option className='theAmount' value={row.amount}>{row.amount}</option>
+             <option className='theAmount' value={row.amount}><p className="pnow">{row.amount}</p></option>
              {Array.from({ length: 500 }).map((_,i)=>{
-              if(i % 10 ==0 && i > 2){
+              if(i >0){
                   return(
                  
                     <option  value={i}>{i}</option>
@@ -52,16 +52,17 @@ export default function AdminCartTable(props) {
               
               })}
              </select>
+             
 
               </TableCell>
               <TableCell component="th" scope="row">
                 <img src={row.productimg} alt="" className="img maxh30" />
               </TableCell>
-              <TableCell align="right">{row.productname}</TableCell>
-              <TableCell align="right">({row.providersid}){row.name}</TableCell>
-              <TableCell align="right">{row.price}.00 -- {row.price * row.amount}.00 שח</TableCell>
+              <TableCell align="right"><p className="pnow">{row.productname}</p></TableCell>
+              <TableCell align="right"><p className="pnow">({row.providersid}){row.name}</p></TableCell>
+              <TableCell align="right"><p className="pnow">{row.price}.00 ש"ח -- {row.price * row.amount}.00 ש"ח</p></TableCell>
                           
-                            <TableCell align="right">({row.productid})</TableCell>
+                            <TableCell align="right"><p className="pnow">({row.productid})</p></TableCell>
 
        
 

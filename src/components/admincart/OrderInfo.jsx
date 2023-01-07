@@ -15,18 +15,18 @@ export default function OrderInfo(props) {
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell align="right">מספר הזמנה</TableCell>
-            <TableCell align="right"> סוג מוצר</TableCell>
+            <TableCell align="right"><p className="pnow">מספר הזמנה</p></TableCell>
+            <TableCell align="right"><p className="pnow"> סוג מוצר</p></TableCell>
 
-            <TableCell align="right">שם מוצר</TableCell>
-            <TableCell align="right"> מספר מוצר</TableCell>
+            <TableCell align="right"><p className="pnow">שם מוצר</p></TableCell>
+            <TableCell align="right"><p className="pnow"> מספר מוצר</p></TableCell>
 
-            <TableCell align="right">שם עובד מזמין</TableCell>
-            <TableCell align="right">מחיר </TableCell>
-            <TableCell align="right"> כמות מוצר</TableCell>
-            <TableCell align="right">  שם ספק</TableCell>
+            <TableCell align="right"><p className="pnow">שם עובד מזמין</p></TableCell>
+            <TableCell align="right"><p className="pnow">מחיר </p></TableCell>
+            <TableCell align="right"><p className="pnow"> כמות מוצר</p></TableCell>
+            <TableCell align="right"><p className="pnow">  שם ספק</p></TableCell>
 
-            <TableCell align="right"> תמונה</TableCell>
+            <TableCell align="right"><p className="pnow"> תמונה</p></TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -35,18 +35,18 @@ export default function OrderInfo(props) {
               key={row.id}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
             >
-              <TableCell align="right">{row.adminorderid}</TableCell>
-              <TableCell align="right">{row.type}</TableCell>
+              <TableCell align="right"><p className="pnow">{row.adminorderid}</p></TableCell>
+              <TableCell align="right"><p className="pnow">{row.type}</p></TableCell>
 
-              <TableCell align="right">{row.productname}</TableCell>
+              <TableCell align="right"><p className="pnow">{row.productname}</p></TableCell>
 
               <TableCell align="right" component="th" scope="row">
-                {row.productid}
+             <p className="pnow">   {row.productid}</p>
               </TableCell>
-              <TableCell align="right">{row.employeename}</TableCell>
-              <TableCell align="right">{row.price}שח</TableCell>
-              <TableCell align="right">{row.quantity}</TableCell>
-              <TableCell align="right">{row.providername}</TableCell>
+              <TableCell align="right"><p className="pnow">{row.employeename}</p></TableCell>
+              <TableCell align="right"><p className="pnow">{row.price}ש"ח</p></TableCell>
+              <TableCell align="right"><p className="pnow">{row.quantity}</p></TableCell>
+              <TableCell align="right"><p className="pnow">{row.providername}</p></TableCell>
 
               
 

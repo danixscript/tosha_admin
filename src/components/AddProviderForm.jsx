@@ -77,7 +77,18 @@ function AddProviderForm(props) {
                     name="cat"
                     id="cat"
                 />
+                <label htmlFor="address">יום הזמנות:</label>
+                
+                <input
+                type='text'
+                className="inputEmp"
+                    values={props.addProvider.values.day}
+                    onChange={props.addProvider.handleChange}
+                    name="day"
+                    id="day"
+                />
 <br />
+
   
           <button  className="btn" type="submit">send</button>
         </form>

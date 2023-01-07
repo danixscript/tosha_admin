@@ -38,7 +38,7 @@ export default function ProvidersOrderTable(props) {
 
 
               <TableCell align="right" component="th" scope="row">
-               <NavLink to='/orderinfo' state={{orderid:row.adminorderid,totalprice:row.totalprice}}>{row.adminorderid }  לפרטים   </NavLink>
+               <NavLink to='/orderinfo' state={{orderid:row.adminorderid,totalprice:row.totalprice}}><p className="pnow">{row.adminorderid }  לפרטים </p>  </NavLink>
               </TableCell>
               <TableCell align="right">{row.date.split('T')[0]}</TableCell>
               <TableCell align="right">{row.employeename}</TableCell>

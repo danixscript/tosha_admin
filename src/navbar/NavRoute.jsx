@@ -81,9 +81,7 @@ dispatch(adminloguot())
 <Route path="/productpage" element={<ProductPage/>} exact/>
 </Route>
 
-<Route path="/profile" element={ <PrivateRoute />} exact> 
-<Route path="/profile" element={<ProfileScreen/>} exact/>
-</Route>
+
 
 <Route path="/userinfi" element={ <PrivateRoute />} exact> 
 <Route path="/userinfi" element={<UserInfoScreen/>} exact/>
@@ -112,6 +110,9 @@ dispatch(adminloguot())
 
 <Route path="/usersscreen" element={ <AdminHardPermissions />} exact> 
 <Route path="/usersscreen" element={<UsersScreen/>} exact/>
+</Route>
+<Route path="/profile" element={ <AdminHardPermissions />} exact> 
+<Route path="/profile" element={<ProfileScreen/>} exact/>
 </Route>
 
 <Route path="/addprovider" element={ <AdminHardPermissions />} exact> 

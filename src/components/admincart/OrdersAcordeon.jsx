@@ -19,12 +19,14 @@ export default function OrdersAcordeon(props) {
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>מספר הזמנה</TableCell>
-            <TableCell align="right">תאריך</TableCell>
-            <TableCell align="right">שם עובד מזמין</TableCell>
-            <TableCell align="right">מחיר כולל</TableCell>
-            <TableCell align="right"> מצב הזמנה</TableCell>
-            <TableCell align="right"> מספר ספק</TableCell>
+          <TableCell align="right"><p className="pnow"> מספר הזמנה</p></TableCell>
+          <TableCell align="right"><p className="pnow"> תאריך</p></TableCell>
+          <TableCell align="right"><p className="pnow"> שם ספק </p></TableCell>
+          <TableCell align="right"><p className="pnow">  מספר ספק</p></TableCell>
+
+          <TableCell align="right"><p className="pnow"> שם עובד מזמין</p></TableCell>
+          <TableCell align="right"><p className="pnow"> מחיר כולל</p></TableCell>
+          <TableCell align="right"><p className="pnow">  מצב הזמנה</p></TableCell>
 
           </TableRow>
         </TableHead>
@@ -40,20 +42,23 @@ export default function OrdersAcordeon(props) {
               <TableCell align="right" component="th" scope="row">
                <NavLink to='/orderinfo' state={{orderid:row.adminorderid,totalprice:row.totalprice}}>{row.adminorderid }  לפרטים   </NavLink>
               </TableCell>
-              <TableCell align="right">{row.date.split('T')[0]}</TableCell>
-              <TableCell align="right">{row.employeename}</TableCell>
-              <TableCell align="right">{row.totalprice}</TableCell>
+              <TableCell align="right"><p className="pnow">{row.date.split('.')[0]}</p></TableCell>
+              <TableCell align="right"><p className="pnow">{row.providername}</p></TableCell>
+              <TableCell align="right"><p className="pnow">{row.providerid}</p></TableCell>
+
+
+              <TableCell align="right"><p className="pnow">{row.employeename}</p></TableCell>
+              <TableCell align="right"><p className="pnow">{row.totalprice} ש"ח  </p></TableCell>
               {row.activeorder == 1 ?
-                          <TableCell   align="right">הזמנה מאושרת</TableCell>
+                          <TableCell   align="right"><p className="pnow">הזמנה מאושרת</p></TableCell>
 
             :
 <TableCell className='colorred'  align="right">
-הזמנה לא מאושרת
+<p className="pnow">הזמנה לא מאושרת</p>
 </TableCell>
 
       
           }
-                        <TableCell align="right">{row.providerid}</TableCell>
 
 
             </TableRow>

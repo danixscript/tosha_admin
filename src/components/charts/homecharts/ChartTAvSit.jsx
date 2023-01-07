@@ -13,7 +13,12 @@ import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Resp
     },[props])
 
   function setUp(){
-    let currentMonthMax = Math.max(...props.data.map((o) =>  parseInt(o.orderssumintype) )); // if the array has a custom object that contains 'CurrentMonth'
+    props.data.map((e)=>{
+      if(e.ordertype == 'SIT'){
+        e.ordertype = 'seat'
+      }
+    })
+    let currentMonthMax = Math.max(...props.data.map((o) =>  parseInt(o.orderssumintype)     )); // if the array has a custom object that contains 'CurrentMonth'
 
     setYAxisMax(currentMonthMax *1.1 ); 
   }
@@ -37,7 +42,7 @@ import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Resp
           <YAxis domain={[0,yAxisMax4]} />
           <Tooltip />
           <Legend />
-          <Bar dataKey="orderssumintype" fill="#82ca9d" />
+          <Bar dataKey={"orderssumintype"} fill="#82ca9d" />
 
 
         </BarChart>

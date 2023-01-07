@@ -19,11 +19,13 @@ export default function UsersOrdersTable(props) {
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell align="right">מספר הזמנה</TableCell>
-            <TableCell align="right">תאריך</TableCell>
-            <TableCell align="right">  מחיר</TableCell>
-            <TableCell align="right"> מצב הזמנה</TableCell>
-            <TableCell align="right">  מאושרות\מבוטלות</TableCell>
+            <TableCell align="right"><p className="pnow">מספר הזמנה</p></TableCell>
+            <TableCell align="right"><p className="pnow">  מייל לקוח</p></TableCell>
+
+            <TableCell align="right"><p className="pnow">תאריך</p></TableCell>
+            <TableCell align="right"><p className="pnow">  מחיר</p></TableCell>
+            <TableCell align="right"><p className="pnow"> מצב הזמנה</p></TableCell>
+            <TableCell align="right"><p className="pnow">  מאושרות\מבוטלות</p></TableCell>
 
           </TableRow>
         </TableHead>
@@ -37,17 +39,19 @@ export default function UsersOrdersTable(props) {
 
 
               <TableCell align="right" component="th" scope="row">
-               <NavLink to='/userorderinfo' state={{id:row.id}}>{row.id }  לפרטים   </NavLink>
+               <NavLink to='/userorderinfo' state={{id:row.id}}><p className="pnow">{row.id }  לפרטים </p>  </NavLink>
               </TableCell>
-              <TableCell align="right">{row.userorderdate}</TableCell>
-              <TableCell align="right">{row.orderprice}</TableCell>
-              <TableCell align="right">{row.active == 1 ? 'הזמנה שולמה בהצלחה':"הזמנה לא שולמה"}</TableCell>
+              <TableCell align="right"><p className="pnow">{row.useremail}</p></TableCell>
+
+              <TableCell align="right"><p className="pnow">{row.userorderdate.split('.')[0]}</p></TableCell>
+              <TableCell align="right"><p className="pnow">{row.orderprice} ש"ח  </p></TableCell>
+              <TableCell align="right">{row.active == 1 ? <p className="pnow">'הזמנה שולמה בהצלחה'</p>: <p className="pno">"הזמנה לא שולמה"</p> }</TableCell>
               {row.uptofiftin != null ? 
               
-              <TableCell align="right">{row.uptofiftin == 1 ? 'מעל 15 אנשים' : "הזמנה מאושרת"}</TableCell>
+              <TableCell align="right">{row.uptofiftin == 1 ? <p className="pnow">'מעל 15 אנשים'</p> : <p className="pnow">"הזמנה מאושרת"</p> }</TableCell>
 
               
-              :                        <TableCell align="right" className='censeldorder'>ההזמנה בוטלה</TableCell>
+              :                        <TableCell align="right" className='censeldorder'><p className="pnow">ההזמנה בוטלה</p></TableCell>
             }
         
 

@@ -18,11 +18,13 @@ import AdminCartTable from "../components/admincart/AdminCartTable";
 import { NavLink } from "react-router-dom";
 import ButtonEr from "../components/buttons/ButtonEr";
 import PayButton from "../components/buttons/PayButton";
+import { START_LOAD } from "../Redux/constants/loaderConstant.js";
 function CartScreen() {
   const dispatch = useDispatch();
   const admin = useSelector((state) => state.admin);
   const cart = useSelector((state) => state.admincart);
   const productSource = useSelector((state) => state.productSource);
+  const Loader = useSelector((state) => state.Loader);
 
 
   
@@ -42,6 +44,7 @@ function changeAmount(e,ele){
   }
 
   function buyNow(e){
+    dispatch({type:START_LOAD})
     let obj = {
       admin:admin.admin,
       products:cart.cartItems,
@@ -68,8 +71,12 @@ function changeAmount(e,ele){
 <div className="maxh200">
 <AdminCartTable changeAmount={changeAmount} removeProductFromCart={removeProductFromCart} permissions={admin.admin.permissions} list={cart.cartItems}/>
 </div>     <br />
+{Loader.Loader?
+<h3>התהליך בקניה</h3>
+:
+
      <PayButton func={buyNow} text={cart.total +" שלם וקנה עכשיו"} />
-     
+  }   
       {/* <ProductList
         getSum={getSum}
         addProduct={addProduct}

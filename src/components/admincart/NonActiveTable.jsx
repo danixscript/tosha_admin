@@ -21,11 +21,11 @@ export default function NonActiveTable(props) {
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>מספר הזמנה</TableCell>
-            <TableCell align="right">תאריך</TableCell>
-            <TableCell align="right">שם עובד מזמין</TableCell>
-            <TableCell align="right">מחיר כולל</TableCell>
-            <TableCell align="right"> אישור הזמנה</TableCell>
+            <TableCell align="right"><p className="pnow">מספר הזמנה</p></TableCell>
+            <TableCell align="right"><p className="pnow">תאריך</p></TableCell>
+            <TableCell align="right"><p className="pnow">שם עובד מזמין</p></TableCell>
+            <TableCell align="right"><p className="pnow">מחיר כולל</p></TableCell>
+            <TableCell align="right"><p className="pnow"> אישור הזמנה</p></TableCell>
 
           </TableRow>
         </TableHead>
@@ -37,10 +37,10 @@ export default function NonActiveTable(props) {
             >
 
 
-              <TableCell component="th" scope="row">
+              <TableCell align="right" component="th" scope="row">
                <NavLink to='/orderinfo' state={{orderid:row.adminorderid}}>{row.adminorderid}</NavLink>
               </TableCell>
-              <TableCell align="right">{row.date}</TableCell>
+              <TableCell align="right"><p className="pnow">{row.date}</p></TableCell>
               <TableCell align="right">{row.employeename}</TableCell>
               <TableCell align="right">{row.totalprice}</TableCell>
               {row.activeorder == 1 ?

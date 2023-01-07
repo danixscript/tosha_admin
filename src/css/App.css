@@ -1,8 +1,30 @@
+body{
+    font-size: 1.6rem;
+}
+
 .positionfix{
     position: absolute;
     top: 50%;
     left: 50%;
     
+}
+.bgred{
+    background-color: red;
+  }
+label{
+    font-size: 1.6rem;
+}
+input{
+    font-size: 1.6rem;
+}
+option{
+    font-size: 1.6rem;
+}
+select{
+    font-size: 1.6rem;
+}
+p{
+    font-size: 1.6rem;
 }
 .errposition{
     position: fixed;

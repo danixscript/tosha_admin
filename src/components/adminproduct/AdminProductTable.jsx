@@ -8,6 +8,7 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { NavLink } from "react-router-dom";
 import DeleteOrder from "../buttons/DeleteOrder";
+import '../../css/App.css'
 
 export default function AdminProductTable(props) {
   return (
@@ -33,6 +34,7 @@ export default function AdminProductTable(props) {
             <TableRow
               key={row.id}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+              className={row.quantity < row.minimum ? "bgred":''}
             >
               <TableCell component="th" scope="row">
                 {row.quantity}

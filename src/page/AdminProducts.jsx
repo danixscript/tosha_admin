@@ -15,7 +15,7 @@ function AdminProducts() {
   const dispatch = useDispatch();
 
   useEffect(()=>{
-    dispatch(getAllProductStore())
+    dispatch(getAllProductStore()) 
   },[])
 
   function searchFor(e){

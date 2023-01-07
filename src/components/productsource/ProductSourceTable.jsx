@@ -14,14 +14,14 @@ import Paper from '@mui/material/Paper';
 export default function ProductSourceTable(props) {
   return (
     <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
+      <Table sx={{ minWidth: 1050 }} size="" aria-label="a dense table">
         <TableHead>
           <TableRow>
-            <TableCell>קוד מוצר</TableCell>
-            <TableCell align="right">שם מוצר</TableCell>
-            <TableCell align="right">שם ומספר חברה</TableCell>
-            <TableCell align="right">מחיר</TableCell>
-            <TableCell align="right">מחיקת מוצר</TableCell>
+            <TableCell align="right"><p className="pnow">קוד מוצר</p></TableCell>
+            <TableCell align="right"><p className="pnow">שם מוצר</p></TableCell>
+            <TableCell align="right"><p className="pnow">שם ומספר חברה</p></TableCell>
+            <TableCell align="right"><p className="pnow">מחיר</p></TableCell>
+            <TableCell align="right"><p className="pnow">מחיקת מוצר</p></TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -30,14 +30,18 @@ export default function ProductSourceTable(props) {
               key={row.productid}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
-              <TableCell component="th" scope="row">
-                {row.productid}
+              <TableCell align="right" component="th" scope="row">
+             <p className="pnow">   {row.productid}</p>
               </TableCell>
-              <TableCell align="right">{row.productname}</TableCell>
-              <TableCell align="right">({row.providersid}){row.name}</TableCell>
-              <TableCell align="right">{row.price}</TableCell>
+              <TableCell align="right"><p className="pnow">{row.productname}</p></TableCell>
+              <TableCell align="right"><p className="pnow">({row.providersid}){row.name}</p></TableCell>
+              <TableCell align="right"><p className="pnow">{row.price} ש"ח</p></TableCell>
              {props.permissions == 1?
-                           <TableCell align="right" ><button id={row.productid} onClick={()=>{props.removeProduct(row)}}>מחק מוצר זה  {row.productid}</button></TableCell>
+                           
+                           <TableCell align="right" >
+                            <button id={row.productid} onClick={()=>{props.removeProduct(row)}}>
+                           <p className="pnow">{row.productid}מחק מוצר זה</p></button>
+                           </TableCell>
 
             :'you cannot delete admins'}
             </TableRow>

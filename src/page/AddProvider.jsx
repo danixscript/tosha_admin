@@ -5,11 +5,14 @@ import { useEffect, useState } from "react";
 import { addProvidersNow, getAllProviders, removeProviderNow } from "../Redux/Actions/providerActions";
 import ProvidersTable from "../components/ProvidersTable";
 import DeleteAlert from "../components/DeleteAlert";
+import { START_LOAD } from "../Redux/constants/loaderConstant.js";
 
 
 function AddProvider() {
   const admin = useSelector((state) => state.admin);
   const providers = useSelector((state) => state.providers);
+  const Loader = useSelector((state) => state.Loader);
+
 const [popUpState,setPopUpState] = useState(false)
 const [providerState,setProviderState] = useState({})
 
@@ -22,7 +25,7 @@ const [providerState,setProviderState] = useState({})
 dispatch(getAllProviders())
   })
 
-  const addProvider = useFormik({
+  const addProvider = useFormik({ 
     initialValues:{
       name: "",
       agentname:'',
@@ -31,9 +34,11 @@ dispatch(getAllProviders())
       email:"",
       zipcode:'',
       cat:"",
+      day:"",
       permissions:admin.admin.permissions
   },onSubmit:async values  => {
     try{
+      dispatch({type:START_LOAD})
        dispatch(addProvidersNow({data:values}))
           
     }catch(e){
@@ -72,7 +77,12 @@ function removeProvider(id){
         <p>כאן תוכל להוסיף ספקים או להוריד אותם</p>
         <p>רק</p>
         </div>
-       <AddProviderForm addProvider={addProvider} />
+        {Loader.Loader?
+        <h4>כבר נעדכן אותך מה קרה</h4>
+        :    
+           <AddProviderForm addProvider={addProvider} />
+
+        }
        <br />
        {popUpState ?
        <div className="positionfix">

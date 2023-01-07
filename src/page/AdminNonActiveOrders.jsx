@@ -30,7 +30,7 @@ function AdminNonActiveOrders() {
       <div className="App">
         <h1>הזמנות לא מאושרות</h1>
         <br />
-        <NavLink to='/adminorders'>חזרה להזמנות</NavLink>
+        <NavLink to='/adminorders'> <p className="pnow cw ">חזרה להזמנות</p></NavLink>
 <br />
         {adminorder.activeorders.length > 0 ? 
         <div className="f">

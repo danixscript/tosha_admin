@@ -7,7 +7,7 @@ import {
   import {
     SET_ADMIN_PRODUCTS,SET_PRICE,
      SET_SINGLE_PRODUCT,SET_MIN, 
-     REMOVE_PRODUCT_MY,DE_ACTIVE_SINGLE_PRODUCT, ACTIVE_SINGLE_PRODUCT
+     REMOVE_PRODUCT_MY,DE_ACTIVE_SINGLE_PRODUCT, ACTIVE_SINGLE_PRODUCT,SET_QUANTITY
  
   } from '../constants/adminProductContent'
   
@@ -118,6 +118,10 @@ dispatch({type:SET_SINGLE_PRODUCT,data:data})
               data:data.product
              
             });
+            dispatch({
+              type: MSG,
+              data: {msg:'עדכנת מחיר מוצר ', type:'good'}
+            })
           
           }
         })
@@ -135,6 +139,45 @@ dispatch({type:SET_SINGLE_PRODUCT,data:data})
     }
   }
 
+  export const setProdQuantityNow = (data) => async (dispatch) => {
+    try {
+      await axiosConfig
+        .post("/adminproducts/setquantity",data)
+        .then((res) => {
+          if (res.data.err) {
+            return dispatch({
+              type: MSG,
+              data: res.data.err
+            })
+  
+          } else {
+           data.product.quantity  = data.quantity 
+          
+            dispatch({
+              type: SET_QUANTITY,
+              data:data.product
+             
+            });
+            dispatch({
+              type: MSG,
+              data: {msg:'עדכנת מלאי מוצר ', type:'good'}
+            })
+          
+          }
+        })
+        .catch((err) => {
+             dispatch({
+                type: MSG,
+                data: {type:'bad',msg:err.message}
+              })
+        });
+    } catch (e) {
+      dispatch({
+        type: PRODUCT_FAIL,
+        payload: e.response && e.response.data.message ? e.response.data.message : e.message,
+      })
+    }
+  }
 
   
   export const setMinNow = (data) => async (dispatch) => {
@@ -156,7 +199,10 @@ dispatch({type:SET_SINGLE_PRODUCT,data:data})
               data:data.product
              
             });
-          
+            dispatch({
+              type: MSG,
+              data: {msg:'עדכנת נקודת איזון מוצר ', type:'good'}
+            })
           }
         })
         .catch((err) => {

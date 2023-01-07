@@ -57,7 +57,7 @@ getget()
 
     return (
       <div className="flexcol center">
-        <h1>    כל ההזמנות שנעשו מהאתר שלי</h1>
+        <h1>        הזמנות של לקוחות</h1>
   <div className="w100">
    <UsersOrdersTable list={usersorders.userOrders}/>
        

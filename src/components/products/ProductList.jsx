@@ -20,7 +20,7 @@ function ProductList(props){
           
         :"no items yet"}
     
-        </div>
+        </div> 
     )
 }
 

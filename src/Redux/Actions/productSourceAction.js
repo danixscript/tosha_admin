@@ -12,9 +12,10 @@ import {
   } from '../constants/productSourceContent'
   
   import axiosConfig from "../../config/AxiosConfig";
+import { STOP_LOAD } from '../constants/loaderConstant.js';
   
   
-  export const getProductsSource = () => async (dispatch) => {
+  export const getProductsSource = (data) => async (dispatch) => {
     try {
       await axiosConfig
         .get("/productsource")
@@ -26,9 +27,23 @@ import {
             })
   
           } else {
+  let arr
+  console.log('hggfhgjfj',data)
+
+         if(data == 'כללי' || data == undefined){
+          console.log('hggfhgjfj')
+          arr = res.data.allproducts
+         }else{
+          arr = res.data.allproducts.filter((e)=>{
+            return e.providersid == data
+          })
+         }
+
+
+
             dispatch({
               type: SET_STORE_PRODUCTS,
-              data: res.data.allproducts
+              data: arr
             });
   
   
@@ -121,6 +136,7 @@ import {
               type: MSG,
               data: res.data.msg
             });
+            dispatch({type:STOP_LOAD})
   
   
           }

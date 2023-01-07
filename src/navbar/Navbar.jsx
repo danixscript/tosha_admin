@@ -29,17 +29,16 @@ function Navbar(props) {
 
     
       <div className="flexcol w100">
-      <NavLink className={'linkInNav'} to={{pathname:'/'}} >דף הבית</NavLink>
-      <NavLink className={'linkInNav'} to={{pathname:'/usersorders'}} > הזמנות של לקוחות</NavLink>
+      <NavLink  className={({isActive}) => isActive ? "activeclassname linkInNav":'linkInNav'} to={{pathname:'/'}} >דף הבית</NavLink>
+      <NavLink className={({isActive}) => isActive ? "activeclassname linkInNav":'linkInNav'} to={{pathname:'/usersorders'}} > הזמנות של לקוחות</NavLink>
 
       
 
-      <NavLink className={'linkInNav'} to={{pathname:'/profile'}} >פרופיל</NavLink>
-       {/* <NavLink className={'linkInNav'} to={{pathname:'/productlist'}} >  הזמנה חדשה</NavLink> */}
-       <NavLink className={'linkInNav'} to={{pathname:'/orderbyprovider'}} >  הזמנה חדשה</NavLink>
-       <NavLink className={'linkInNav'} to={{pathname:'/adminorders'}} > הזמנות </NavLink>
-       <NavLink className={'linkInNav'} to={{pathname:'/adminproduct'}} >  המוצרים שלי </NavLink>
-       <NavLink className={'linkInNav'} to={{pathname:'/adminmaterials'}} >  חומרי הגלם שלי </NavLink>
+       {/* <NavLink className={({isActive}) => isActive ? "activeclassname linkInNav":'linkInNav'} to={{pathname:'/productlist'}} >  הזמנה חדשה</NavLink> */}
+       <NavLink className={({isActive}) => isActive ? "activeclassname linkInNav":'linkInNav'} to={{pathname:'/orderbyprovider'}} >   הזמנה חדשה מספק</NavLink>
+       <NavLink className={({isActive}) => isActive ? "activeclassname linkInNav":'linkInNav'} to={{pathname:'/adminorders'}} >  הזמנות מספקים</NavLink>
+       <NavLink className={({isActive}) => isActive ? "activeclassname linkInNav":'linkInNav'} to={{pathname:'/adminproduct'}} >    מלאי המוצרים  </NavLink>
+       <NavLink className={({isActive}) => isActive ? "activeclassname linkInNav":'linkInNav'} to={{pathname:'/adminmaterials'}} >  מלאי חומרי הגלם  </NavLink>
 
 
       </div>
@@ -48,10 +47,12 @@ function Navbar(props) {
         {admin.admin.permissions ? 
       <div className="flexcol   ">
         
-            <NavLink className={'linkInNavManeger'} to={{pathname:'/addprovider'}} >ניהול ספקים</NavLink>
-            <NavLink className={'linkInNavManeger'} to={{pathname:'/registeremployee'}} >ניהול עובדים </NavLink>
-            <NavLink className={'linkInNavManeger'} to={{pathname:'/addproductsource'}}state={{name:'כללי',id:undefined}} >הוסף מוצרים כללי </NavLink>
-            <NavLink className={'linkInNavManeger'} to={{pathname:'/usersscreen'}} >ניהול לקוחות </NavLink>
+            <NavLink  className={({isActive}) => isActive ? "activeclassnameprophil linkInNav":'linkInNavManeger'} to={{pathname:'/addprovider'}} >ניהול ספקים</NavLink>
+            <NavLink className={({isActive}) => isActive ? "activeclassnameprophil linkInNav":'linkInNavManeger'} to={{pathname:'/addproductsource'}}state={{name:'כללי',id:undefined}} >הוסף מוצרים  </NavLink>
+
+            <NavLink  className={({isActive}) => isActive ? "activeclassnameprophil linkInNav":'linkInNavManeger'} to={{pathname:'/registeremployee'}} >ניהול עובדים </NavLink>
+            <NavLink className={({isActive}) => isActive ? "activeclassnameprophil linkInNav":'linkInNavManeger'} to={{pathname:'/usersscreen'}} >ניהול לקוחות </NavLink>
+            <NavLink className={({isActive}) => isActive ? "activeclassnameprophil linkInNav":'linkInNavManeger'} to={{pathname:'/profile'}} >פרופיל</NavLink>
 
             
 
