@@ -42,20 +42,25 @@ export default function ProductCard(props) {
       /> 
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-         {props.product.itemname}
+       <p className="pnow">  {props.product.itemname}</p>
         </Typography>
-        <Typography paragraph> נקודת איזון:  {props.product.minimum}</Typography>
-        <Typography paragraph>עדכן נקודת איזון <br /> <input onChange={props.getMinMin} type="number" placeholder={props.product.minimum} /> <button onClick={props.setMin} >עדכן</button></Typography>
+        <Typography paragraph> <p className="pnow">נקודת איזון:  {props.product.minimum}</p></Typography>
+        <Typography paragraph>  <p className="pnow">עדכון נקותד איזון</p> 
+        
+        <br /> <input onChange={props.getMinMin} type="number" placeholder={props.product.minimum} /> <button onClick={props.setMin} >עדכן</button></Typography>
 
-        <Typography paragraph>כמות במלאי:  
+        <Typography paragraph> <p className="pnow">כמות במלאי</p>
+
         {props.product.idprovider == 0 ?
 <div className="v">                <input onChange={props.getAmountin} type="number" placeholder={props.product.quantity} /> <button onClick={props.setProductQuantity} >עדכן</button>
 </div>
       :
       <p className='pnpw'>{props.product.quantity} המוצר לא שלך תצטרך לקנות</p>}
         </Typography>
-        <Typography paragraph>עדכן מחיר <br /> <input onChange={props.getPrice} type="number" placeholder={props.product.price+' ש"ח'} /> <button onClick={props.setPrice} >עדכן</button></Typography>
-        <Typography paragraph>מחיר:  {props.product.price}ש"ח</Typography>
+        <Typography paragraph> <p className="pnow">עדכן מוצר</p><br /> 
+        <input onChange={props.getPrice} type="number" placeholder={props.product.price+' ש"ח'} /> <button onClick={props.setPrice} >עדכן</button>
+        </Typography>
+        <Typography paragraph><p className="pnow">מחיר {props.product.price}ש"ח</p>  </Typography>
 
       </CardContent>
       {props.product.price > 0 ?

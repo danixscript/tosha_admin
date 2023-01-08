@@ -20,6 +20,8 @@ export default function UORItable(props) {
         <TableHead>
           <TableRow>
             <TableCell align="right"><p className="pnow"> תמונה</p></TableCell>
+            <TableCell align="right"><p className="pnow"> שם</p></TableCell>
+
             <TableCell align="right"><p className="pnow">מחיר</p></TableCell>
             <TableCell align="right"><p className="pnow">  כמות</p></TableCell>
             <TableCell align="right"><p className="pnow">  סוג הזמנה</p></TableCell>
@@ -38,6 +40,8 @@ export default function UORItable(props) {
               <TableCell align="right" component="th" scope="row">
                 <img src={row.userproductimg} alt="" className="img maxh" />
               </TableCell>
+              <TableCell align="right"><p className="pnow">{row.userproductname} </p></TableCell>
+
               <TableCell align="right"><p className="pnow">{row.userproductprice} ש"ח</p></TableCell>
               <TableCell align="right"><p className="pnow">{row.userproductquantity}</p></TableCell>
               <TableCell align="right"><p className="pnow">{row.ordertype == 'SIT' ? "בלשבת":"TA"}</p></TableCell>

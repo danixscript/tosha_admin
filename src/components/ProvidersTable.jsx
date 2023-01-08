@@ -15,19 +15,19 @@ import { NavLink } from 'react-router-dom';
 export default function ProvidersTable(props) {
   return (
     <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+      <Table sx={{ minWidth: 950 }} aria-label="simple table">
         <TableHead>
           <TableRow>
             
-            <TableCell align="right">מספר ספק</TableCell>
-            <TableCell align="right">שם ספק&nbsp;(בע'ם)</TableCell>
-            <TableCell align="right">שם סוכן&nbsp;(g)</TableCell>
-            <TableCell align="right">כתובת&nbsp;(g)</TableCell>
-            <TableCell align="right">אימייל&nbsp;(g)</TableCell>
-            <TableCell align="right">מיקוד&nbsp;(g)</TableCell>
-            <TableCell align="right">טלפון&nbsp;(g)</TableCell>
-            <TableCell align="right">סוג סחורה&nbsp;(g)</TableCell>
-            <TableCell align="right" >הוסף מוצרים לספק</TableCell>
+            <TableCell align="right"><p className="pnow">מספר ספק</p></TableCell>
+            <TableCell align="right"><p className="pnow">שם ספק&nbsp;(בע'ם)</p></TableCell>
+            <TableCell align="right"><p className="pnow">שם סוכן</p></TableCell>
+            <TableCell align="right"><p className="pnow">כתובת</p></TableCell>
+            <TableCell align="right"><p className="pnow">אימייל</p></TableCell>
+            <TableCell align="right"><p className="pnow">מיקוד</p></TableCell>
+            <TableCell align="right"><p className="pnow">טלפון</p></TableCell>
+            <TableCell align="right"><p className="pnow">סוג סחורה</p></TableCell>
+            <TableCell align="right"><p className="pnow">הוסף מוצרים לספק</p></TableCell>
 
           </TableRow>
         </TableHead>
@@ -37,23 +37,26 @@ export default function ProvidersTable(props) {
               key={row.id}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
-              <TableCell component="th" scope="row">
-              <NavLink to="/providerinfo" state={{provider:row}}> לפרטים {row.id}</NavLink>
+              <TableCell align="right" component="th" scope="row">
+            <p className="pnow">  <NavLink to="/providerinfo" state={{provider:row}}> {row.id } לפרטים </NavLink></p>
               </TableCell>
 
-              <TableCell align="right">{row.name}</TableCell>
-              <TableCell align="right">{row.agentname}</TableCell>
-              <TableCell align="right">{row.address}</TableCell>
-              <TableCell align="right">{row.email}</TableCell>
-              <TableCell align="right">{row.zipcode}</TableCell>
-              <TableCell align="right">{row.phone}</TableCell>
-              <TableCell align="right">{row.cat}</TableCell>
+              <TableCell align="right"><p className="pnow">{row.name}</p></TableCell>
+              <TableCell align="right"><p className="pnow">{row.agentname}</p></TableCell>
+              <TableCell align="right"><p className="pnow">{row.address}</p></TableCell>
+              <TableCell align="right"><p className="pnow">{row.email}</p></TableCell>
+              <TableCell align="right"><p className="pnow">{row.zipcode}</p></TableCell>
+              <TableCell align="right"><p className="pnow">{row.phone}</p></TableCell>
+              <TableCell align="right"><p className="pnow">{row.cat}</p></TableCell>
           {props.permissions == 1 ? 
 
                     <TableCell align="right" >
-                           <div className="flexrow">                                    <NavLink to={'/addproductsource'} state={{name:row.name,id:row.id}}>הוסף מוצרים לספק</NavLink>
+                           <div className="flexrow">                                    
+                           <p className="pnow"><NavLink to={'/addproductsource'} state={{name:row.name,id:row.id}}>הוסף מוצרים לספק</NavLink></p>
                                       
-                                      <button  onClick={()=>{props.popup(row)}}>הסר ספק</button></div>
+                                      <button  onClick={()=>{props.popup(row)}}> <p className="pnow">הסר ספק</p></button>
+                                      
+                                      </div>
                            
                             </TableCell>
                 

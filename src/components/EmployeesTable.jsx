@@ -14,16 +14,16 @@ import Paper from '@mui/material/Paper';
 export default function EmployeesTable(props) {
   return (
     <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
+      <Table sx={{ minWidth: 750 }} size="" aria-label="a dense table">
         <TableHead>
           <TableRow>
             <TableCell>שם</TableCell>
-            <TableCell align="right">מספר</TableCell>
-            <TableCell align="right">תאריך</TableCell>
-            <TableCell align="right">טלפון</TableCell>
+            <TableCell align="right"><p className="pnow">מספר</p></TableCell>
+            <TableCell align="right"><p className="pnow">תאריך</p></TableCell>
+            <TableCell align="right"><p className="pnow">טלפון</p></TableCell>
 
-            <TableCell align="right">הרשאות</TableCell>
-            <TableCell align="right">Protein&nbsp;(g)</TableCell>
+            <TableCell align="right"><p className="pnow">הרשאות</p></TableCell>
+            <TableCell align="right"><p className="pnow">Protein&nbsp;(g)</p></TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -33,10 +33,11 @@ export default function EmployeesTable(props) {
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
               <TableCell component="th" scope="row">
-                {row.name}
+                <p className="pnow">{row.name}</p>
               </TableCell>
-              <TableCell align="right">{row.id}</TableCell>
-              <TableCell align="right">{row.date}</TableCell>
+              <TableCell align="right"><p className="pnow">{row.id}</p></TableCell>
+              <TableCell align="right"><p className="pnow">
+                {row.date}</p></TableCell>
               <TableCell align="right">          
                    <input type="number" placeholder={row.phone}  onChange={props.getphone} />
               <button onClick={()=>{props.updateEmployeePhone(row)}} >עדכן</button>

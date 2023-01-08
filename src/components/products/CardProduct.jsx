@@ -24,16 +24,16 @@ export default function MediaCard(props) {
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-         {props.item.productname}
+         <p className="pnow">{props.item.productname}</p>
         </Typography>
         <Typography gutterBottom variant="p" component="div">
-         {props.item.name}
+       <div className="p now">  {props.item.name}</div>
         </Typography>
         <Typography gutterBottom variant="p" component="div">
-         {props.item.cat}
+        <p className="pnow"> {props.item.cat}</p>
         </Typography>
         <Typography variant="body2" color="text.secondary">
-        {props.item.price}שח
+        <p className="pnow">{props.item.price}  ש"ח</p>
         </Typography>
 
       </CardContent>

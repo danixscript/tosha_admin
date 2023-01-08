@@ -38,13 +38,13 @@ export default function NonActiveTable(props) {
 
 
               <TableCell align="right" component="th" scope="row">
-               <NavLink to='/orderinfo' state={{orderid:row.adminorderid}}>{row.adminorderid}</NavLink>
+               <NavLink to='/orderinfo' state={{orderid:row.adminorderid}}><p className="pnow">{row.adminorderid} לפרטים</p></NavLink>
               </TableCell>
               <TableCell align="right"><p className="pnow">{row.date}</p></TableCell>
-              <TableCell align="right">{row.employeename}</TableCell>
-              <TableCell align="right">{row.totalprice}</TableCell>
+              <TableCell align="right"><p className="pnow">{row.employeename}</p></TableCell>
+              <TableCell align="right"><p className="pnow">{row.totalprice} ש"ח</p></TableCell>
               {row.activeorder == 1 ?
-                          <TableCell align="right">הזמנה מאושרת</TableCell>
+                          <TableCell align="right"> <p className="pnow">הזמנה מאושרת</p></TableCell>
 
             :
           <div className="buttons">

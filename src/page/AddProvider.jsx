@@ -73,7 +73,7 @@ function removeProvider(id){
       <div className="flexcol center">
         <div className="maxwidtable w100">
         <div className="heading">
-        <h1>הוסף בפקים</h1>
+        <h1>הוסף ספקים</h1>
         <p>כאן תוכל להוסיף ספקים או להוריד אותם</p>
         <p>רק</p>
         </div>
@@ -90,8 +90,10 @@ function removeProvider(id){
 
        </div>
       :""}
-       <ProvidersTable permissions={admin.admin.permissions} popup={popup} list={providers.providers} />
-      </div></div>
+      </div>
+      <ProvidersTable permissions={admin.admin.permissions} popup={popup} list={providers.providers} />
+
+      </div>
     );
   }
    
