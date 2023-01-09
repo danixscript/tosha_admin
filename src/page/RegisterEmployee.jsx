@@ -77,11 +77,11 @@ getAllWorkers()
       <AddEmployee createEmployee={createEmployee}/>
 <br /><br />
       <div>
-    <EmployeesTable updateEmployeePermissieons={updateEmployeePermissieons} updateEmployeePhone={updateEmployeePhone} getphone={getphone} permissions={admin.admin.permissions} removeEmployee={removeEmployee} workers={workers.adminworkers}/>
         </div>
 </div>
   
-   
+       <EmployeesTable updateEmployeePermissieons={updateEmployeePermissieons} updateEmployeePhone={updateEmployeePhone} getphone={getphone} permissions={admin.admin.permissions} removeEmployee={removeEmployee} workers={workers.adminworkers}/>
+
       
     </div>
   );
