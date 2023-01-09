@@ -81,3 +81,7 @@ border-bottom: 2px solid black;
     margin-bottom: 5px;
     color: white;
 }
+
+.overflowscroll{
+    overflow-y: scroll;
+}

@@ -10,7 +10,7 @@ function Navbar(props) {
 
   return (
     <div className="navPosition navInsideNav h100  bc">
-     <div className="h100 flexcol center">
+     <div className="h100 flexcol center overflowscroll">
       {admin.isLog ? 
 
     <div className="activelinks flexcol  h100 ">
