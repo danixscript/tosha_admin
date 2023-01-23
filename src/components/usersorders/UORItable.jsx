@@ -44,7 +44,7 @@ export default function UORItable(props) {
 
               <TableCell align="right"><p className="pnow">{row.userproductprice} ש"ח</p></TableCell>
               <TableCell align="right"><p className="pnow">{row.userproductquantity}</p></TableCell>
-              <TableCell align="right"><p className="pnow">{row.ordertype == 'SIT' ? "בלשבת":"TA"}</p></TableCell>
+              <TableCell align="right"><p className="pnow">{row.ordertype == 'SIT' ? "בישיבה":"TA"}</p></TableCell>
             
     
             </TableRow>

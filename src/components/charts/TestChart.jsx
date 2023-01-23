@@ -47,7 +47,7 @@ setUp()
         >
           <CartesianGrid stroke="#f5f5f5" />
           <XAxis dataKey="date"  />
-          <YAxis dataKey="totalprice" domain={[0,yAxisMax6]} />
+          <YAxis dataKey="totalprice" domain={[0,Math.floor(yAxisMax6)]} />
           <Tooltip />
           <Legend />
           <Area type="monotone" dataKey="" fill="#8884d8" stroke="#8884d8" />

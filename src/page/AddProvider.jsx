@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { addProvidersNow, getAllProviders, removeProviderNow } from "../Redux/Actions/providerActions";
 import ProvidersTable from "../components/ProvidersTable";
 import DeleteAlert from "../components/DeleteAlert";
-import { START_LOAD } from "../Redux/constants/loaderConstant.js";
+import { START_LOAD, STOP_LOAD } from "../Redux/constants/loaderConstant.js";
 
 
 function AddProvider() {
@@ -43,6 +43,7 @@ dispatch(getAllProviders())
           
     }catch(e){
       console.log(e)
+      dispatch({type:STOP_LOAD})
     }
   }});
 
@@ -74,8 +75,7 @@ function removeProvider(id){
         <div className="maxwidtable w100">
         <div className="heading">
         <h1>הוסף ספקים</h1>
-        <p>כאן תוכל להוסיף ספקים או להוריד אותם</p>
-        <p>רק</p>
+       
         </div>
         {Loader.Loader?
         <h4>כבר נעדכן אותך מה קרה</h4>

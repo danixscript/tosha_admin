@@ -29,7 +29,8 @@ function Home() {
         if (res.data.err) {
             return dispatch({
                 type: MSG,
-                data: res.data.err
+                data: res.data.err  
+                
             })
 
         } else {

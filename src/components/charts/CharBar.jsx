@@ -37,7 +37,7 @@ import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Resp
         >
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="employeename" />
-          <YAxis  domain={[0,yAxisMax5]} />
+          <YAxis  domain={[0,Math.floor(yAxisMax5)]} />
           <Tooltip />
           <Legend />
           <Bar dataKey="ordersnumber" fill="#8884d8" />

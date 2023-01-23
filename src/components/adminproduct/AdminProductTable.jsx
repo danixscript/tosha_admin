@@ -21,7 +21,7 @@ export default function AdminProductTable(props) {
             <TableCell align="right"><p className="pnow">שם מוצר</p></TableCell>
             <TableCell align="right"><p className="pnow"> מספר חברה</p></TableCell>
             <TableCell align="right"><p className="pnow">מחיר</p></TableCell>
-            <TableCell align="right"><p className="pnow">מספר מוצר</p></TableCell>
+            <TableCell align="right"><p className="pnow"> נקודת איזון</p></TableCell>
             <TableCell align="right"><p className="pnow">מיקום במחסן</p></TableCell>
             <TableCell align="right"><p className="pnow"> מצב מוצר</p></TableCell>
             <TableCell align="right"><p className="pnow">  עדכן מוצר</p></TableCell>
@@ -37,7 +37,7 @@ export default function AdminProductTable(props) {
               className={row.quantity < row.minimum ? "bgred":''}
             >
               <TableCell align="right" component="th" scope="row">
-              <p className="pnow">  כמות {row.quantity}  <span>\</span> {row.minimum}   
+              <p className="pnow">  כמות {row.quantity}  
                </p>
               </TableCell>
               <TableCell component="th" scope="row">
@@ -52,7 +52,7 @@ export default function AdminProductTable(props) {
               </TableCell>
 
               <TableCell align="right">
-              <p className="pnow">  {row.id}</p>
+              <p className="pnow">  {row.minimum}</p>
                 {/* <select className='flexcol' onChange={(e)=>{props.changeAmount(row,e)}} name="" id="">
              <option className='theAmount' value={row.amount}>{row.amount}</option>
              {Array.from({ length: 500 }).map((_,i)=>{

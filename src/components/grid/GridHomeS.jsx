@@ -26,7 +26,7 @@ export default function GridHomeS(props) {
           <Item className='w100 h100'>
          
          <div className="chartdiv">
-         <h1>       הזמנות TA / הזמנות בלשבת  </h1>
+         <h1>       הזמנות TA / הזמנות בישיבה  </h1>
 
           <ChartTAvSit data={props.TASit}/>
 

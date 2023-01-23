@@ -28,7 +28,7 @@ function AdminOrderInfo() {
           {/* <TableForAll list={adminorder.orders}/> */}
         {location.state.totalprice?
         <h1>  
-        סך כל ההזמנה {location.state.totalprice}     שח    
+        סך כל ההזמנה {location.state.totalprice}     ש"ח    
       </h1>
       :""}
         </div>

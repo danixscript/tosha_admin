@@ -45,10 +45,10 @@ export default function UsersOrdersTable(props) {
 
               <TableCell align="right"><p className="pnow">{row.userorderdate.split('.')[0]}</p></TableCell>
               <TableCell align="right"><p className="pnow">{row.orderprice} ש"ח  </p></TableCell>
-              <TableCell align="right">{row.active == 1 ? <p className="pnow">'הזמנה שולמה בהצלחה'</p>: <p className="pno">"הזמנה לא שולמה"</p> }</TableCell>
+              <TableCell align="right">{row.active == 1 ? <p className="pnow">הזמנה שולמה בהצלחה</p>: <p className="pno">הזמנה לא שולמה</p> }</TableCell>
               {row.uptofiftin != null ? 
               
-              <TableCell align="right">{row.uptofiftin == 1 ? <p className="pnow">'מעל 15 אנשים'</p> : <p className="pnow">"הזמנה מאושרת"</p> }</TableCell>
+              <TableCell align="right">{row.uptofiftin == 1 ? <p className="pnow">מעל 15 אנשים</p> : <p className="pnow">הזמנה מאושרת</p> }</TableCell>
 
               
               :                        <TableCell align="right" className='censeldorder'><p className="pnow">ההזמנה בוטלה</p></TableCell>

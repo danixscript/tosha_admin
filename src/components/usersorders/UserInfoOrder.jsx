@@ -42,17 +42,17 @@ export default function UserInfoOrder(props) {
               <TableCell align="right"><p className="pnow">{row.date}</p></TableCell>
               <TableCell align="right"><p className="pnow">{row.orderprice}</p></TableCell>
               <TableCell align="right">{row.active == 1 ? 
-          <p className="pnow">    'הזמנה שולמה בהצלחה'</p>
+          <p className="pnow">    הזמנה שולמה בהצלחה</p>
               :
-        <p className="pnow">      "הזמנה לא שולמה"</p>
+        <p className="pnow">      הזמנה לא שולמה</p>
               }
               </TableCell>
               {row.uptofiftin != null ? 
               
               <TableCell align="right">{row.uptofiftin == 1 ? 
-         <p className="pnow">       'מעל 15 אנשים'</p>
+         <p className="pnow">       מעל 15 אנשים</p>
                  : 
-           <p className="pnow">   "הזמנה מאושרת"</p>
+           <p className="pnow">   הזמנה מאושרת</p>
               }</TableCell>
 
               

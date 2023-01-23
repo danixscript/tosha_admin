@@ -46,7 +46,7 @@ setUp()
         >
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="date" />
-          <YAxis dataKey="totalprice" domain={[0,yAxisMax8]} />
+          <YAxis dataKey="totalprice" domain={[0,Math.floor(yAxisMax8) ]} />
           <Tooltip />
           <Legend />
           <ReferenceLine x="Page C" stroke="red" label="Max PV PAGE" />

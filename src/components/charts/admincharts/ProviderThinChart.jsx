@@ -35,7 +35,7 @@ import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Resp
         >
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="productname" />
-          <YAxis domain={[0,yAxisMax3]} dataKey="quantity" />
+          <YAxis domain={[0,Math.floor(yAxisMax3)]} dataKey="quantity" />
           <Tooltip />
           <Legend />
           <Bar dataKey="quantity"barSize={50} fill="royalblue" />

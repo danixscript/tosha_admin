@@ -55,7 +55,7 @@ function Navbar(props) {
             <NavLink className={({isActive}) => isActive ? "activeclassnameprophil linkInNav":'linkInNavManeger'} to={{pathname:'/profile'}} >פרופיל</NavLink>
 
             
-
+<br /><br /><br /><br /><br />
       </div>
     :""}
    

@@ -22,7 +22,7 @@ export default function AdminCartTable(props) {
 
             <TableCell align="right"> <p className="pnpw">שם מוצר</p></TableCell>
             
-            <TableCell align="right"> <p className="pnpw">שם ומספר חברה</p></TableCell>
+            <TableCell align="right"> <p className="pnpw">שם  חברה</p></TableCell>
             <TableCell align="right"> <p className="pnpw">מחיר</p></TableCell>
 
             <TableCell align="right"> <p className="pnpw">קוד מוצר</p></TableCell>
@@ -59,7 +59,7 @@ export default function AdminCartTable(props) {
                 <img src={row.productimg} alt="" className="img maxh30" />
               </TableCell>
               <TableCell align="right"><p className="pnow">{row.productname}</p></TableCell>
-              <TableCell align="right"><p className="pnow">({row.providersid}){row.name}</p></TableCell>
+              <TableCell align="right"><p className="pnow">{row.name}</p></TableCell>
               <TableCell align="right"><p className="pnow">{row.price}.00 ש"ח -- {row.price * row.amount}.00 ש"ח</p></TableCell>
                           
                             <TableCell align="right"><p className="pnow">({row.productid})</p></TableCell>

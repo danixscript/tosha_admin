@@ -3,6 +3,7 @@ import {CLEAR, MSG, PRODUCT_FAIL} from '../constants/errConstant'
 import {ERROR} from '../constants/errConstant'
 import axiosConfig from "../../config/AxiosConfig";
 import { REMOVE_PROVIDE, SET_ALL_PROVIDERS,SET_SINGLE_PROVIDER ,EDIT_PROVIDER} from '../constants/providerContent';
+import { STOP_LOAD } from '../constants/loaderConstant.js';
 
 
 export const setSingleProviderNow = (data) => async (dispatch)=>{
@@ -40,6 +41,7 @@ export const addProvidersNow = (data) => async (dispatch)=>{
         })
         .catch((err) => {
           dispatch({type:MSG,data:"somthing wrong"})
+          dispatch({type:STOP_LOAD})
         });
 
     }catch(e){

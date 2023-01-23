@@ -54,6 +54,7 @@ function changeAmount(e,ele){
 
     }
     dispatch(buyNowNow(obj))
+     
   }
  
   function searchFromCart(e) {
