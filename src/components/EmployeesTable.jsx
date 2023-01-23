@@ -59,7 +59,7 @@ export default function EmployeesTable(props) {
             
 
              {props.permissions == 1?
-                           <TableCell align="right" ><button id={row.id} onClick={props.removeEmployee}>remove number  {row.id}</button></TableCell>
+                           <TableCell align="right" ><button id={row.id} className='btdelet' onClick={props.removeEmployee}>מחק   </button></TableCell>
 
             :'you cannot delete admins'}
 

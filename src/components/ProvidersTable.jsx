@@ -54,7 +54,7 @@ export default function ProvidersTable(props) {
                            <div className="flexrow">                                    
                            <p className="pnow"><NavLink to={'/addproductsource'} state={{name:row.name,id:row.id}}>הוסף מוצרים לספק</NavLink></p>
                                       
-                                      <button  onClick={()=>{props.popup(row)}}> <p className="pnow">הסר ספק</p></button>
+                                      <button className='btdelet'  onClick={()=>{props.popup(row)}}> <p className="pnow">הסר ספק</p></button>
                                       
                                       </div>
                            

@@ -39,8 +39,8 @@ export default function ProductSourceTable(props) {
              {props.permissions == 1?
                            
                            <TableCell align="right" >
-                            <button id={row.productid} onClick={()=>{props.removeProduct(row)}}>
-                           <p className="pnow">{row.productid}מחק מוצר זה</p></button>
+                            <button className='btdelet' id={row.productid} onClick={()=>{props.removeProduct(row)}}>
+                           מחק </button>
                            </TableCell>
 
             :'you cannot delete admins'}

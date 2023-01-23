@@ -15,7 +15,7 @@ export default function AdminMaterialTable(props) {
       <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
         <TableHead>
           <TableRow>
-            <TableCell>כמות מוצר</TableCell>
+            <TableCell> <p className="pnow">כמות מוצר</p></TableCell>
             <TableCell align="right" ><p className="pnow">תמונה</p></TableCell>
             <TableCell align="right" ><p className="pnow">שם מוצר</p></TableCell>
             <TableCell align="right" ><p className="pnow"> שם חברה</p></TableCell>

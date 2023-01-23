@@ -37,10 +37,10 @@ export default function AdminProductTable(props) {
               className={row.quantity < row.minimum ? "bgred":''}
             >
               <TableCell align="right" component="th" scope="row">
-              <p className="pnow">  כמות {row.quantity}  
+              <p className="pnow"> <span>X</span>   {row.quantity} 
                </p>
               </TableCell>
-              <TableCell component="th" scope="row">
+              <TableCell align="right" component="th" scope="row">
                 <img src={row.productimg} alt="" className="img maxh30" />
               </TableCell>
               <TableCell align="right"><p className="pnow">{row.itemname}</p></TableCell>

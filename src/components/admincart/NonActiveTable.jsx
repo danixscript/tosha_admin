@@ -22,7 +22,7 @@ export default function NonActiveTable(props) {
         <TableHead>
           <TableRow>
             <TableCell align="right"><p className="pnow">מספר הזמנה</p></TableCell>
-            <TableCell align="right"><p className="pnow">תאריך</p></TableCell>
+            <TableCell align="right"><p className="pnow">שעה/תאריך</p></TableCell>
             <TableCell align="right"><p className="pnow">שם עובד מזמין</p></TableCell>
             <TableCell align="right"><p className="pnow">מחיר כולל</p></TableCell>
             <TableCell align="right"><p className="pnow"> אישור הזמנה</p></TableCell>
@@ -40,7 +40,7 @@ export default function NonActiveTable(props) {
               <TableCell align="right" component="th" scope="row">
                <NavLink to='/orderinfo' state={{orderid:row.adminorderid}}><p className="pnow">{row.adminorderid} לפרטים</p></NavLink>
               </TableCell>
-              <TableCell align="right"><p className="pnow">{row.date}</p></TableCell>
+              <TableCell align="right"><p className="pnow">{row.date.split('.')[0].split('T')[0]+"/" +row.date.split('.')[0].split('T')[1] }</p></TableCell>
               <TableCell align="right"><p className="pnow">{row.employeename}</p></TableCell>
               <TableCell align="right"><p className="pnow">{row.totalprice} ש"ח</p></TableCell>
               {row.activeorder == 1 ?

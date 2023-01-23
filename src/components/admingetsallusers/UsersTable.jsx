@@ -59,7 +59,7 @@ export default function UsersTable(props) {
 
 
 
-                            <TableCell align="right"><button onClick={()=>{props.Removeuser(row.id)}} >מחק לקוח</button></TableCell>
+                            <TableCell align="right"><button className='btdelet' onClick={()=>{props.Removeuser(row.id)}} >מחק </button></TableCell>
 
 
            
