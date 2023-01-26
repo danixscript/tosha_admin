@@ -97,7 +97,7 @@ function EditProviderForm(props) {
           value={props.EditProvider.values.day}
           onChange={props.EditProvider.handleChange}
           name="day"
-          id="day"
+          id="day" 
         />
         <br />
 

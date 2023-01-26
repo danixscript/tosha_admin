@@ -55,7 +55,7 @@ export default function AdminCartTable(props) {
              
 
               </TableCell>
-              <TableCell component="th" scope="row">
+              <TableCell component="th" align="right" scope="row">
                 <img src={row.productimg} alt="" className="img maxh30" />
               </TableCell>
               <TableCell align="right"><p className="pnow">{row.productname}</p></TableCell>
@@ -64,11 +64,11 @@ export default function AdminCartTable(props) {
                           
                             <TableCell align="right"><p className="pnow">({row.productid})</p></TableCell>
 
-       
+        
 
 
           
-                           <TableCell align="right" ><button id={row.productid} onClick={()=>{props.removeProductFromCart(row)}}>מחק מוצר זה  {row.productid}</button></TableCell>
+                           <TableCell align="right" ><button className='btdelet' id={row.productid} onClick={()=>{props.removeProductFromCart(row)}} >הסר    </button></TableCell>
 
            
             </TableRow>

@@ -45,7 +45,7 @@ export default function AdminProductTable(props) {
               </TableCell>
               <TableCell align="right"><p className="pnow">{row.itemname}</p></TableCell>
               <TableCell align="right">
-                <p className="pnow">({row.idprovider}){row.providername}</p>
+                <p className="pnow">{row.providername}</p>
               </TableCell>
               <TableCell align="right">
                 <p className="pnow">{row.price}.00  ש"ח</p>

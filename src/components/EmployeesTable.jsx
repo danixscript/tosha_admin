@@ -17,13 +17,13 @@ export default function EmployeesTable(props) {
       <Table sx={{ minWidth: 750 }} size="" aria-label="a dense table">
         <TableHead>
           <TableRow>
-            <TableCell>שם</TableCell>
+            <TableCell align="right"><p className="p">שם</p></TableCell>
             <TableCell align="right"><p className="pnow">מספר</p></TableCell>
             <TableCell align="right"><p className="pnow">תאריך</p></TableCell>
             <TableCell align="right"><p className="pnow">טלפון</p></TableCell>
 
             <TableCell align="right"><p className="pnow">הרשאות</p></TableCell>
-            <TableCell align="right"><p className="pnow">Protein&nbsp;(g)</p></TableCell>
+            <TableCell align="right"><p className="pnow">מחק עובד</p></TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -32,15 +32,15 @@ export default function EmployeesTable(props) {
               key={row.name}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
-              <TableCell component="th" scope="row">
+              <TableCell align="right" component="th" scope="row">
                 <p className="pnow">{row.name}</p>
               </TableCell>
               <TableCell align="right"><p className="pnow">{row.id}</p></TableCell>
               <TableCell align="right"><p className="pnow">
-                {row.date}</p></TableCell>
+                {row.date.split('T')[0]}</p></TableCell>
               <TableCell align="right">          
                    <input type="number" placeholder={row.phone}  onChange={props.getphone} />
-              <button onClick={()=>{props.updateEmployeePhone(row)}} >עדכן</button>
+              <button onClick={()=>{props.updateEmployeePhone(row)}} ><p className="p">עדכן</p></button>
                             
                             </TableCell>
 
@@ -49,8 +49,8 @@ export default function EmployeesTable(props) {
 {props.permissions == 1 ?
           <div>
             {row.permissions == 0 ? 
-                 <button onClick={()=>{props.updateEmployeePermissieons(1,row.id)}} > תן הרשאה</button>
-                :     <button onClick={()=>{props.updateEmployeePermissieons(0,row.id)}} > הורד הרשאה</button>}
+                 <button onClick={()=>{props.updateEmployeePermissieons(1,row.id)}} ><p className="p"> תן הרשאה</p></button>
+                :     <button onClick={()=>{props.updateEmployeePermissieons(0,row.id)}} >  <p className="p">הורד הרשאה</p></button>}
           </div>
 
 :''}             

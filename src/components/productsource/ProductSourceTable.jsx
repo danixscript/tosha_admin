@@ -19,7 +19,7 @@ export default function ProductSourceTable(props) {
           <TableRow>
             <TableCell align="right"><p className="pnow">קוד מוצר</p></TableCell>
             <TableCell align="right"><p className="pnow">שם מוצר</p></TableCell>
-            <TableCell align="right"><p className="pnow">שם ומספר חברה</p></TableCell>
+            <TableCell align="right"><p className="pnow">שם  חברה</p></TableCell>
             <TableCell align="right"><p className="pnow">מחיר</p></TableCell>
             <TableCell align="right"><p className="pnow">מחיקת מוצר</p></TableCell>
           </TableRow>
@@ -34,7 +34,7 @@ export default function ProductSourceTable(props) {
              <p className="pnow">   {row.productid}</p>
               </TableCell>
               <TableCell align="right"><p className="pnow">{row.productname}</p></TableCell>
-              <TableCell align="right"><p className="pnow">({row.providersid}){row.name}</p></TableCell>
+              <TableCell align="right"><p className="pnow">{row.name}</p></TableCell>
               <TableCell align="right"><p className="pnow">{row.price} ש"ח</p></TableCell>
              {props.permissions == 1?
                            
